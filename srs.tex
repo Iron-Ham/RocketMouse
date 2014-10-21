@@ -1,0 +1,213 @@
+\documentclass[a4wide]{article}
+\usepackage{a4wide}
+\newcommand{\comment}[1]{{\tt #1}}
+
+\title{System Requirements Specification for:\\ UNTITLED GAME (Project Walrider?)}
+
+\author1{Hesham H. Salman } %I need to look up the styling for multiple authors. Didn't have internet at the time so I couldn't look it up.
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+\subsection{Overall Description}
+
+
+
+Clearly state purpose of the project.
+By whom and how it will be used
+
+This code is for the developers
+
+\subsection{Definitions}
+
+Acronyms and abbreviations as applicable
+
+\subsection{References}
+
+References to other documents
+
+\subsection{Overview of Developer's Responsibilities}
+
+Responsibilities in terms of development, installation, training, maintenance
+etc.
+
+Eg. The developer is responsible for development, installation,
+loading of all the data relating to books in the library,
+and training of employees.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{General Description}
+
+\subsection{Product Perspective}
+
+Relationship with other products and principal interfaces
+
+Eg.  This product will interface with the existing database of staff/student
+information.  There are four main interfaces.  One for book issual/return
+and fines, one for querying of books, one for adding/deleting books, 
+and one for administration of users.
+
+\subsection{Product Functions Overview}
+
+A library example.
+\begin{enumerate}
+\item Book issue and return
+\item Fine calculation and collection
+\item Adding and deleting books 
+\item Querying to find books
+\item Report generation 
+\item Automatic late book reminder
+\end{enumerate} 
+
+\subsection{User Characteristics}
+
+Who the users are, and what training they may need
+
+\subsection{General Constraints}
+
+About schedule, resources, cost etc.
+
+Eg. This project is to be completed, including coding, testing and loading of
+the database, by Nov 11, 2008.  A prototype demo is due on Oct 21, 2008.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Information Description}
+
+\subsection{Entities and Relationships}
+
+Give a list of entities/relationships that are needed,
+and ER diagrams.
+
+\subsection{Data Dictionary}
+
+Give the relations, their attributes, and for each attribute the
+type and a description of the attribute.  Here's an example.
+
+\begin{enumerate}
+\item customers
+
+\centerline{
+\begin{tabular}{|c|c|c|p{3in}|}
+\hline 
+account\_no& varchar(8)& primary key& account number\\
+\hline 
+name& varchar(20)& not null& Name\\
+\hline 
+profession& varchar(10)& not null& Profession\\
+\hline 
+address& varchar(40)& not null& Address\\
+\hline 
+email& varchar(40)& -& Email Address \\
+\hline 
+\end{tabular}
+}
+
+\end{enumerate}
+
+\subsection{Data Flow}
+
+Give data flow between major units of your software.
+E.g., 
+Most useful in case a task has multiple steps requiring interaction
+with other software or other humans.
+E.g. To purchase a book, user can enter request, department head can
+approve, then librarian approves, then order is made.
+
+\section{Functional Requirements}
+
+Give a description of each process/function.
+Start from what happens when the user connects to the system.
+E.g.  The main screen and alternatives available to choose from would be 
+a functional requirement.
+Authentication when entering the system would be another.
+An interface to issue a book would be a third.
+
+Have one subsection for each functional requirement.
+
+\subsection{Functional Requirement 1}
+
+
+Note what a particular functionality does.
+Make sure to also note what happens in special cases such as 
+out of stock.
+
+\subsection{Functional Requirement 2}
+
+...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{External Interface Requirements}
+
+\subsection{User Interfaces}
+
+This used to be important, and required a user manual giving commands
+screen formats, outputs, error messages, etc.
+In your case just say the web is used as interface.
+
+\subsection{Hardware Interfaces}
+
+Interfaces with existing as well as new or special purpose hardware.
+E.g. smart card reader for authentication.
+In your case say no special hardware.
+
+\subsection{Software Interfaces}
+
+List software platforms that are to be supported.
+
+List interfaces with other software packages etc.
+Make sure to list all software that you interface with.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Performance Requirements}
+
+Capacity requirements (estimates of no of users, database size, ..)
+Response time requirements (for different tasks)
+and throughput (estimates of avg/peak number of transactions per minute, etc).
+Don't worry about exact numbers but give ballpark figures.
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Design Constraints}
+
+\subsection{Standards Compliance}
+
+Software development standards asn well as organizational standards
+(eg reports, auditing).
+
+In your case, say not applicable.
+
+\subsection{Hardware Limitations}
+
+Requirements on machines, operating systems, storage capacities etc.
+This used to be very important, but these days this matters only
+for very fast/highthroughput systems, not so much for the things you
+are doing.
+
+Fault tolerance and reliability requirements should also be listed here.
+
+In your case this is not considered
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Validation Criteria}
+
+Validation criteria for demonstrating 
+successful implementation and user acceptance.  
+In general includes classes of tests and expected software response.
+
+E.g. I will load the database with X amount of data for testing,
+and an overview of tests you will run.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Other Requirements}
+
+\end{document}
