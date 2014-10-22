@@ -231,12 +231,22 @@ Make sure to list all software that you interface with.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Performance Requirements}
+\section{Performance Description}
 
-Capacity requirements (estimates of no of users, database size, ..)
-Response time requirements (for different tasks)
-and throughput (estimates of avg/peak number of transactions per minute, etc).
-Don't worry about exact numbers but give ballpark figures.
+\subsection{Response Time}
+As this application is measuring user reaction time, the response time will need to be as minimal as possible to allow more precise measurements.  Human reaction time has a limit of about 180 milliseconds.  Our application should have a response time less than 100 milliseconds to be effective.
+
+\subsection{Processing Time}
+This follows the same constraints as above.  Processing of user input needs to be near instantaneous.  Data that is collected may be transmitted to the database for storage when convenient, for example between games, such that it does not affect the processing of the application.
+
+\subsection{Memory Constraints}
+Memory constraints will be minimal due to the nature of the application.  However, this should be verified as the application is intended to be used on mobile devices which have severe constraints to both processing and memory.
+
+\subsection{Security \& Privacy}
+Because of the sensitive nature of some of the data collected the application must be secure and must not store any data locally.  One possible exception is the circumstance when there are multiple users on the same device.  In this case an anonymous identifier will be generated locally to differentiate between users.  Data must be transmitted to a secure database from memory and never stored on disk.
+
+\subsection{Storage Requirements}
+A secure database must be present for receiving data transmitted by the application.  The database must be capable of handling transmissions from multiple users at once.  There must also be sufficient space.  At a minimum we would expect 50-100 users, and depending on the popularity of the application, as many as a few hundred.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
