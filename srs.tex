@@ -112,25 +112,43 @@ approve, then librarian approves, then order is made.
 
 \section{Functional Requirements}
 
-Give a description of each process/function.
-Start from what happens when the user connects to the system.
-E.g.  The main screen and alternatives available to choose from would be 
-a functional requirement.
-Authentication when entering the system would be another.
-An interface to issue a book would be a third.
+\begin{enumerate}
+\item Introductory User Survey 
+\item Home Screen
+\item Volume Control
+\item Data Collection
+\item Game Functionality
+\item Data transfer and processing
+\item Result display
+\end{enumerate} 
 
-Have one subsection for each functional requirement.
 
-\subsection{Functional Requirement 1}
+\subsection{Introductory User Survey}
+The introductory user survey is displayed on first load of the program. It must be completed before the home screen is allowed to display. The introductory user survey establishes information to better understand the user's state: whether or not they have been diagnosed with ADHD (and if they have, whether or not they are currently taking medicine), their age, and their gender. This information is required so that the calculations regarding the likelihood of ADHD are accurate. In the case that the user does not complete the survey, their incomplete survey's state is saved, and will be loaded upon re-launch of the program. 
 
+\subsection{Home Screen}
+The home screen must display two navigation options to the user: the option to begin the game and the option to enter the settings pane. In the case that the user does not select an option, the program will remain in the home-screen state. 
 
-Note what a particular functionality does.
-Make sure to also note what happens in special cases such as 
-out of stock.
+\subsection{Volume Control}
+Allows the user to toggle audio volume. 
 
-\subsection{Functional Requirement 2}
+\subsection{Data Collection}
+Collects the following usage metrics from the user:
+\begin{enumerate}
+\item Introductory User Survey
+\item Reaction Time
+\item Amount Played
+\item Number of encounters
+\item Average Session Length
+\end{enumerate}
 
-...
+Furthermore, error logs are collected in the event of an error.
+
+\subsection{Game Functionality}
+The game involves a single character sprite running rightwards, avoiding obstacles which appear at pseudo-random intervals. 
+
+\subsection{Data Transfer and Processing} 
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
