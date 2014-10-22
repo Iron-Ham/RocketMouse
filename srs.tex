@@ -1,11 +1,14 @@
 \documentclass[a4wide]{article}
 \usepackage{a4wide}
+\usepackage{graphicx}
 \usepackage{appendix}
+\usepackage{hyperref}
 \newcommand{\comment}[1]{{\tt #1}}
 
 \title{HurdleJumpr:\\ System Requirements Specification}
 
-\author{Hesham H. Salman \and Jonathon Kissinger \and Sean Mead \and Troy Johnson}
+\author{Hesham H. Salman \and Jonathon Kissinger \and Sean Mead
+\and Troy Johnson}
 
 \begin{document}
 \maketitle
@@ -23,28 +26,19 @@ a medical professional. \newline \newline
 This application is to be used by a number of people with and without ADHD so
 that we may test its detection algorithms.
 
-\subsection{Definitions}
-
-Acronyms and abbreviations as applicable
-
-\subsection{References}
-
-References to other documents
+% \subsection{Definitions}
+%
+% Acronyms and abbreviations as applicable
+%
+% \subsection{References}
+%
+% References to other documents
 
 \subsection{Overview of Developer's Responsibilities}
 
-
-Troy Johnson:
-Jonathon Kissinger:
-Sean Mead:
-Hesham Salman:
-
-Responsibilities in terms of development, installation, training, maintenance
-etc.
-
-Eg. The developer is responsible for development, installation,
-loading of all the data relating to books in the library,
-and training of employees.
+The developer is responsible for development and deployment of the HurdleJumpr
+application to Android systems. The developer is responsible for the maintenance
+of the the system with regards to new feature development and bug fixes.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -52,14 +46,16 @@ and training of employees.
 
 \subsection{Product Perspective}
 
-This product will interface with a server, transferring anonymized local user
-data to a remote server for data processing.
-
+HurdlJumpr is a game that collects the user's response times and usage metrics.
+The information collected is stored in a local database, anonymized, and sent to
+a remote server for data processing. The data processing feeds information for
+calibration of a model that aims to predict the likelihood of a user having
+ADHD.
 
 \subsection{Product Functions Overview}
 
 \begin{enumerate}
-\item Game: Hurdle Jumper
+\item Game Functionality: HurdlJumpr
 \item User input tracking and data collection
 \item Data processing to determine whether or not the user has ADHD
 \item Result generation
@@ -75,8 +71,9 @@ distinction made between users that are medicated and unmedicated.
 
 \subsection{General Constraints}
 
-This project is to be completed, including coding, testing, and loading of the
-database by Nov 30, 2014.
+This project is to be completed to the extent that data has been collected by
+November 30, 2014. Once data has been collected, a model can be created from the
+information gathered and a test of the model can be conducted.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -248,21 +245,17 @@ Don't worry about exact numbers but give ballpark figures.
 
 \subsection{Standards Compliance}
 
-Software development standards asn well as organizational standards
-(eg reports, auditing).
-
-In your case, say not applicable.
+Must be Android Compliant, as defined by the \href{http://static.googleusercontent.com/media/source.android.com/en/us/compatibility/4.0/android-4.0-cdd.pdf}{Android Compatibility Definition Document}
 
 \subsection{Hardware Limitations}
 
-Requirements on machines, operating systems, storage capacities etc.
-This used to be very important, but these days this matters only
-for very fast/highthroughput systems, not so much for the things you
-are doing.
+This application is only targeted at machines running Android version 4.0 or
+higher. An active internet connection is required to send data and usage metrics
+to the server.
 
-Fault tolerance and reliability requirements should also be listed here.
-
-In your case this is not considered
+% @TODO
+% Add space requirements
+% Add Hardware Requirements
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -270,9 +263,27 @@ In your case this is not considered
 \section{Validation Criteria}
 
 \subsection{Documentation}
-The software for both the client side mobile application must be fully documented and clearly readable. The documentation should adequately describe what is occurring within the code in a clear and concise manner. The code should also be as loosely coupled as possible to allow desirable changes to be easily made to the code and to also reduce the possibility of errors cropping up when a developer wants to make changes to the code base. This is important especially on the server side as the algorithm for determining the possibility of ADHD may be constantly changing and refined over time as more and more data becomes available and new patterns in the data are picked up on that may help diagnose a user with ADHD.
+The software for both the client side mobile application must be fully
+documented and clearly readable. The documentation should adequately describe
+what is occurring within the code in a clear and concise manner. The code should
+also be as loosely coupled as possible to allow desirable changes to be easily
+made to the code and to also reduce the possibility of errors cropping up when
+a developer wants to make changes to the code base. This is important especially
+on the server side as the algorithm for determining the possibility of ADHD may
+be constantly changing and refined over time as more and more data becomes
+available and new patterns in the data are picked up on that may help diagnose a
+user with ADHD.
 \subsection{Testing}
-The mobile application must be able to be run on a variety of Android operating systems. Ideally, the application will run on all Android versions greater than or equal to Android 4.0 (Android Jelly Bean). The application should pass all tests we develop using the monkeyrunner application to test the application for possible errors on the mobile application side along with server passing all stress tests performed on it. If these tests are passed and the user can successfully upload their data and get results back (if enough data is available), then the mobile application will pass its acceptance criteria as a prototype for an application with the potential for helping to diagnose users with ADHD.
+The mobile application must be able to be run on a variety of Android operating
+systems. Ideally, the application will run on all Android versions greater than
+or equal to Android 4.0 (Android Jelly Bean). The application should pass all
+tests we develop using the monkeyrunner application to test the application for
+possible errors on the mobile application side along with server passing all
+stress tests performed on it. If these tests are passed and the user can
+successfully upload their data and get results back (if enough data is
+available), then the mobile application will pass its acceptance criteria as a
+prototype for an application with the potential for helping to diagnose users
+with ADHD.
 
 
 
@@ -317,5 +328,8 @@ which I will be glad to do if Dr. Lee doesn’t wish to.\\\\
 for publication?}\\
 Yes, that would be called a work in progress and it's somethig that's not
 uncommon.  They get accepted for publication just like regular papers.
+
+\section{Functional Model}
+\includegraphics[width=\textwidth]{UseCaseDiagram.png}
 
 \end{document}
