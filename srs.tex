@@ -14,7 +14,7 @@
 \subsection{Overall Description}
 
 UNTITLED GAME tracks user inputs and behavioral patterns, and uses this data to determine whether or not the user is likely to have ADHD. This is determined by comparing the user response times and input patterns to those of people with and without ADHD. If the application can determine with a high level of confidence that the user is likely to have ADHD, a suggestion is made to the user to visit a medical professional. \newline \newline
-This application is to be used by a number of people with and without ADHD so that we may test its detection algorithms. 
+This application is to be used by a number of people with and without ADHD so that we may test its detection algorithms.
 
 \subsection{Definitions}
 
@@ -27,7 +27,7 @@ References to other documents
 \subsection{Overview of Developer's Responsibilities}
 
 
-Troy Johnson: 
+Troy Johnson:
 Jonathon Kissinger:
 Sean Mead:
 Hesham Salman:
@@ -56,15 +56,15 @@ This product will interface with a server, transferring anonymized local user da
 \item Data processing to determine whether or not the user has ADHD
 \item Result generation
 \item Comparative analysis of user's data with average user data
-\end{enumerate} 
+\end{enumerate}
 
 \subsection{User Characteristics}
 
-The users of this application are to be people with and without ADHD. A user survey is conducted at the start of this application such that the results can be calibrated based on the user's age and gender. Of users with ADHD, there is a distinction made between users that are medicated and unmedicated. 
+The users of this application are to be people with and without ADHD. A user survey is conducted at the start of this application such that the results can be calibrated based on the user's age and gender. Of users with ADHD, there is a distinction made between users that are medicated and unmedicated.
 
 \subsection{General Constraints}
 
-This project is to be completed, including coding, testing, and loading of the database by Nov 30, 2014. 
+This project is to be completed, including coding, testing, and loading of the database by Nov 30, 2014.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -85,17 +85,17 @@ type and a description of the attribute.  Here's an example.
 
 \centerline{
 \begin{tabular}{|c|c|c|p{3in}|}
-\hline 
+\hline
 account\_no& varchar(8)& primary key& account number\\
-\hline 
+\hline
 name& varchar(20)& not null& Name\\
-\hline 
+\hline
 profession& varchar(10)& not null& Profession\\
-\hline 
+\hline
 address& varchar(40)& not null& Address\\
-\hline 
+\hline
 email& varchar(40)& -& Email Address \\
-\hline 
+\hline
 \end{tabular}
 }
 
@@ -104,7 +104,7 @@ email& varchar(40)& -& Email Address \\
 \subsection{Data Flow}
 
 Give data flow between major units of your software.
-E.g., 
+E.g.,
 Most useful in case a task has multiple steps requiring interaction
 with other software or other humans.
 E.g. To purchase a book, user can enter request, department head can
@@ -113,24 +113,25 @@ approve, then librarian approves, then order is made.
 \section{Functional Requirements}
 
 \begin{enumerate}
-\item Introductory User Survey 
+\item Introductory User Survey
 \item Home Screen
 \item Volume Control
 \item Data Collection
+\item Data Encryption
 \item Game Functionality
 \item Data transfer and processing
 \item Result display
-\end{enumerate} 
+\end{enumerate}
 
 
 \subsection{Introductory User Survey}
-The introductory user survey is displayed on first load of the program. It must be completed before the home screen is allowed to display. The introductory user survey establishes information to better understand the user's state: whether or not they have been diagnosed with ADHD (and if they have, whether or not they are currently taking medicine), their age, and their gender. This information is required so that the calculations regarding the likelihood of ADHD are accurate. In the case that the user does not complete the survey, their incomplete survey's state is saved, and will be loaded upon re-launch of the program. 
+The introductory user survey is displayed on first load of the program. It must be completed before the home screen is allowed to display. The introductory user survey establishes information to better understand the user's state: whether or not they have been diagnosed with ADHD (and if they have, whether or not they are currently taking medicine), their age, and their gender. This information is required so that the calculations regarding the likelihood of ADHD are accurate. In the case that the user does not complete the survey, their incomplete survey's state is saved, and will be loaded upon re-launch of the program.
 
 \subsection{Home Screen}
-The home screen must display two navigation options to the user: the option to begin the game and the option to enter the settings pane. In the case that the user does not select an option, the program will remain in the home-screen state. 
+The home screen must display two navigation options to the user: the option to begin the game and the option to enter the settings pane. In the case that the user does not select an option, the program will remain in the home-screen state.
 
 \subsection{Volume Control}
-Allows the user to toggle audio volume. 
+Allows the user to toggle audio volume.
 
 \subsection{Data Collection}
 Collects the following usage metrics from the user:
@@ -142,14 +143,24 @@ Collects the following usage metrics from the user:
 \item Average Session Length
 \end{enumerate}
 
-Furthermore, error logs are collected in the event of an error.
+Furthermore, error logs are collected in the event of an error. All data is logged in a local database and tagged with a unique identifier.
+
+\subsection{Data Encryption}
+The data is encrypted with an RSA encryption scheme because survey results and collected data may be sensitive.
 
 \subsection{Game Functionality}
-The game involves a single character sprite running rightwards, avoiding obstacles which appear at pseudo-random intervals. 
+The game involves a single character sprite running rightwards, avoiding obstacles which appear at pseudo-random intervals.
 
-\subsection{Data Transfer and Processing} 
+\subsection{Data Transfer and Processing}
+The data is transferred to a remote server where it is processed. The processing involves statistical normalization of the information, as well as comparison with our model. Once the data is transferred to the server, the model determines whether or not the user's individual data follows the same correlative trends as those users with ADHD. 
 
-
+\subsection{Result Display}
+Two results must be displayed to the user:
+\begin{enumerate}
+\item The Game Score
+\item Their likelihood of having ADHD
+\end{enumerate}
+The game score is calculated as the result of the game, whereas their likelihood of having ADHD must be processed remotely and transferred back to the user. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{External Interface Requirements}
@@ -183,7 +194,7 @@ Response time requirements (for different tasks)
 and throughput (estimates of avg/peak number of transactions per minute, etc).
 Don't worry about exact numbers but give ballpark figures.
 
- 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Design Constraints}
@@ -205,13 +216,13 @@ are doing.
 Fault tolerance and reliability requirements should also be listed here.
 
 In your case this is not considered
- 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Validation Criteria}
 
-Validation criteria for demonstrating 
-successful implementation and user acceptance.  
+Validation criteria for demonstrating
+successful implementation and user acceptance.
 In general includes classes of tests and expected software response.
 
 E.g. I will load the database with X amount of data for testing,
