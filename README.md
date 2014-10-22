@@ -1,5 +1,5 @@
 #ADHD_Detection
-==============
+The GitHub home of the HurdleJumpr project. 
 
 ## SRS
 
