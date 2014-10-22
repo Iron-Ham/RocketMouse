@@ -232,14 +232,15 @@ In your case this is not considered
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
 \section{Validation Criteria}
 
-Validation criteria for demonstrating
-successful implementation and user acceptance.
-In general includes classes of tests and expected software response.
+\subsection{Documentation} 
+The software for both the client side mobile application must be fully documented and clearly readable. The documentation should adequately describe what is occurring within the code in a clear and concise manner. The code should also be as loosely coupled as possible to allow desirable changes to be easily made to the code and to also reduce the possibility of errors cropping up when a developer wants to make changes to the code base. This is important especially on the server side as the algorithm for determining the possibility of ADHD may be constantly changing and refined over time as more and more data becomes available and new patterns in the data are picked up on that may help diagnose a user with ADHD.
+\subsection{Testing}
+The mobile application must be able to be run on a variety of Android operating systems. Ideally, the application will run on all Android versions greater than or equal to Android 4.0 (Android Jelly Bean). The application should pass all tests we develop using the monkeyrunner application to test the application for possible errors on the mobile application side along with server passing all stress tests performed on it. If these tests are passed and the user can successfully upload their data and get results back (if enough data is available), then the mobile application will pass its acceptance criteria as a prototype for an application with the potential for helping to diagnose users with ADHD.
 
-E.g. I will load the database with X amount of data for testing,
-and an overview of tests you will run.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
