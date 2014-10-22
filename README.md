@@ -1,5 +1,5 @@
 #HurdleJumpr
-The GitHub home of the HurdleJumpr project. 
+The home of the HurdleJumpr project. 
 
 ## SRS
 
