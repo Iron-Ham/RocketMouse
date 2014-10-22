@@ -266,6 +266,23 @@ A secure database must be present for receiving data transmitted by the applicat
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\section{Exception Handling}
+
+\subsection{Form}
+
+In general user forms are prone to exceptions.
+Handling these exceptions is crucial to valid form submission.
+Each field will be appropriately handled and validated before submission.
+
+\subsection{Network}
+
+Network communication may fail from either the client or server end.
+In these cases proper exception handling is important.
+The code must be versatile enough to put up with null or delayed responses.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Design Constraints}
 
 \subsection{Standards Compliance}
