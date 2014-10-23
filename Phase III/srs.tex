@@ -12,17 +12,36 @@
 \maketitle
 
 \section{External Design Specifications}
-The design for layout for the user game will be relatively simple. When the user launches the game, they will be presented with the menu in FIGURE 1.
+The design for layout for the user game will be relatively simple. When the user launches the game, they will be presented with the menu in figure 1. This menu will give the user several options. The user will have the option play the game, view details about the creators of the game, and check the results of their data was most recently sent in for processing. If the user selects to play the game they will be presented with a layout similar to figure 2. This is the game layout the user will be presented with when they start playing the game.
+
 \begin{figure 1}
-    \centering
-    \textbf{Figure 1}\par\medskip
-    \includegraphics[height=8cm]{images/intro.png}
-    \caption{Figure 1}
+   \centerline{\includegraphics[height=8cm]{images/intro.png}}
+    \centerline{\caption{Figure 1}}
 \end{figure 1}
 
-\includegraphics[width =8cm,height=5cm]{images/screen_layout.png}
-\includegraphics[width =10cm,height=5cm]{images/user_jumping.png}
-\includegraphics[height=8cm]{images/diagnosis_screen.png} The user will have the option play the game, view details about the makers of the game, of check the results of their data was most recently sent in for processing. If the user selects to play the game they will be presented with a layout similar to FIGURE 2. FIGURE 2 is the basic game, more details may be added later if time permits. The design will be a side scroller game with the user being represented by a character of some sort (a stick figure in FIGURE 2. The user will then have to jump over the black blocks that show up as show in FIGURE 2 as the characters moves from left to right across the screen.  A figure of the user jumping can be seen in FIGURE 3. Once the user has finished playing, their reactions time are uploaded and once their results are received the user will see a screen similar to that of FIGURE 4, where they are notified about their results. The results of our mining of their response time data may become more detailed later on depending upon how accurate we can get with out predictions.
+ Figure 2 is the basic game layout. However, more details may be added later if time permits. The design will be a two-dimensional side scroller game in which the user is represented by a character of some sort (a stick figure in our case in figure 2). The user will then have to jump over the black blocks that pop up as the user moves along from left to right. A figure of the user jumping can be seen in figure 3.
+ 
+\begin{figure 2}
+   \centerline{\includegraphics[height=5cm, width = 8cm]{images/screen_layout.png}}
+    \centerline{\caption{Figure 2}}
+\end{figure 2}
+
+ The time it takes from when a block first appears, to the time it takes the user to tap the screen to make their character jump over the block is what we will use as the  measure for reaction time for the game. Once the user has finished playing, their reaction times are uploaded to the server for further processing. Once their results have been processed and the results are received on the user's phone, the user will see a screen similar to that of FIGURE 4, where they are notified about their results.
+
+\begin{figure 3}
+   \centerline{\includegraphics[height=5cm, width = 8cm]{images/user_jumping.png}}
+    \centerline{\caption{Figure 2}}
+\end{figure 3}
+
+
+The results of our data mining of their response time data may become more detailed later on depending upon how accurate we can get with out predictions. For now, we will just have them a low,medium, or high recommendation for getting checking out by a doctor for the possibility of a ADHD diagnosis.
+
+\begin{figure 4}
+   \centerline{\includegraphics[height=8cm]{images/diagnosis_screen.png}}
+    \centerline{\caption{Figure 1}}
+\end{figure 4}
+
+  
 \section{Architectural Design Specifications}
 \section{Detailed Design Specifications}
 \section{Test Plan}

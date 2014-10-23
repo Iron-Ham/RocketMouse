@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.2)  22 OCT 2014 18:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.2)  22 OCT 2014 20:48
 entering extended mode
 **srs.tex
 ("C:\Users\johns4ta\Desktop\HurdleJumpr\HurdleJumpr\Phase III\srs.tex"
@@ -120,7 +120,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.16 \begin{figure 1}
+l.17 \begin{figure 1}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -129,7 +129,7 @@ or  <return>  to continue without it.
 <images/intro.png, id=1, 224.33812pt x 448.67625pt>
 File: images/intro.png Graphic file (type png)
  <use images/intro.png>
-Package pdftex.def Info: images/intro.png used on input line 19.
+Package pdftex.def Info: images/intro.png used on input line 18.
 (pdftex.def)             Requested size: 113.80846pt x 227.62204pt.
 
 
@@ -139,8 +139,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.20     \caption
-                 {Figure 1}
+l.19     \centerline{\caption{Figure 1}}
+                                        
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -151,8 +151,21 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.21 \end{figure 1}
+l.20 \end{figure 1}
                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Environment figure 2 undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 \begin{figure 2}
+                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -161,39 +174,134 @@ or  <return>  to continue without it.
 File: images/screen_layout.png Graphic file (type png)
 
 <use images/screen_layout.png>
-Package pdftex.def Info: images/screen_layout.png used on input line 23.
+Package pdftex.def Info: images/screen_layout.png used on input line 25.
 (pdftex.def)             Requested size: 227.61945pt x 142.27086pt.
 
-<images/user_jumping.png, id=3, 446.41782pt x 214.55156pt>
-File: images/user_jumping.png Graphic file (type png)
 
-<use images/user_jumping.png>
-Package pdftex.def Info: images/user_jumping.png used on input line 24.
-(pdftex.def)             Requested size: 284.52798pt x 142.26576pt.
+! LaTeX Error: \caption outside float.
 
-<images/diagnosis_screen.png, id=4, 218.31563pt x 447.92343pt>
-File: images/diagnosis_screen.png Graphic file (type png)
-
-<use images/diagnosis_screen.png>
-Package pdftex.def Info: images/diagnosis_screen.png used on input line 25.
-(pdftex.def)             Requested size: 110.93974pt x 227.62204pt.
-
-Overfull \hbox (104.7834pt too wide) in paragraph at lines 23--26
-[][] []
- []
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26     \centerline{\caption{Figure 2}}
+                                        
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 [1
 
 {C:/Users/johns4ta/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users
 /johns4ta/Desktop/HurdleJumpr/HurdleJumpr/Phase III/images/intro.png>]
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
+
+! LaTeX Error: \begin{document} ended by \end{figure 2}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27 \end{figure 2}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Environment figure 3 undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31 \begin{figure 3}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<images/user_jumping.png, id=11, 446.41782pt x 214.55156pt>
+File: images/user_jumping.png Graphic file (type png)
+
+<use images/user_jumping.png>
+Package pdftex.def Info: images/user_jumping.png used on input line 32.
+(pdftex.def)             Requested size: 227.62239pt x 142.26576pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33     \centerline{\caption{Figure 2}}
+                                        
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure 3}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34 \end{figure 3}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Environment figure 4 undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 \begin{figure 4}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<images/diagnosis_screen.png, id=12, 218.31563pt x 447.92343pt>
+File: images/diagnosis_screen.png Graphic file (type png)
+
+<use images/diagnosis_screen.png>
+Package pdftex.def Info: images/diagnosis_screen.png used on input line 40.
+(pdftex.def)             Requested size: 110.93974pt x 227.62204pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41     \centerline{\caption{Figure 1}}
+                                        
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 [2 <C:/Users/johns4ta/Desktop/HurdleJumpr/HurdleJumpr/Phase III/images/screen_l
 ayout.png> <C:/Users/johns4ta/Desktop/HurdleJumpr/HurdleJumpr/Phase III/images/
-user_jumping.png> <C:/Users/johns4ta/Desktop/HurdleJumpr/HurdleJumpr/Phase III/
-images/diagnosis_screen.png>]
+user_jumping.png>]
+
+! LaTeX Error: \begin{document} ended by \end{figure 4}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 \end{figure 4}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ì in font cmr10!
@@ -203,6 +311,8 @@ Missing character: There is no ì in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ì in font cmr10!
+[3 <C:/Users/johns4ta/Desktop/HurdleJumpr/HurdleJumpr/Phase III/images/diagnosi
+s_screen.png>]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
@@ -221,7 +331,6 @@ Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
- [3]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
@@ -230,13 +339,13 @@ Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
 
 
-! LaTeX Error: \begin{enumerate} on input line 29 ended by \end{document}.
+! LaTeX Error: \begin{enumerate} on input line 48 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.74 \end{document}
+l.93 \end{document}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -245,24 +354,23 @@ or  <return>  to continue without it.
 [4] ("C:\Users\johns4ta\Desktop\HurdleJumpr\HurdleJumpr\Phase III\srs.aux") )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 29 (\begingroup)
+### semi simple group (level 1) entered at line 48 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 1274 strings out of 493921
- 17536 string characters out of 3147274
- 70636 words of memory out of 3000000
- 4593 multiletter control sequences out of 15000+200000
- 7588 words of font info for 27 fonts, out of 3000000 for 9000
+ 1278 strings out of 493921
+ 17572 string characters out of 3147274
+ 69636 words of memory out of 3000000
+ 4598 multiletter control sequences out of 15000+200000
+ 7280 words of font info for 26 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,6n,19p,1128b,314s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,6n,19p,559b,322s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
-x10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on srs.pdf (4 pages, 145405 bytes).
+x12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on srs.pdf (4 pages, 135556 bytes).
 PDF statistics:
- 39 PDF objects out of 1000 (max. 8388607)
+ 35 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
