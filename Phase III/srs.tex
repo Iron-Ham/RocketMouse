@@ -12,17 +12,43 @@
 \maketitle
 
 \section{External Design Specifications}
-The design for layout for the user game will be relatively simple. When the user launches the game, they will be presented with the menu in FIGURE 1.
-\begin{figure 1}
-    \centering
-    \textbf{Figure 1}\par\medskip
-    \includegraphics[height=8cm]{images/intro.png}
-    \caption{Figure 1}
-\end{figure 1}
+The design for layout for the user game will be relatively simple. When the user launches the game, they will be presented with the menu in ~\ref{fig:intro_image}. This menu will give the user several options. The user will have the option play the game, view details about the creators of the game, and check the results of their data was most recently sent in for processing. If the user selects to play the game they will be presented with a layout similar to ~\ref{fig:screen_layout}. This is the game layout the user will be presented with when they start playing the game.
 
-\includegraphics[width =8cm,height=5cm]{images/screen_layout.png}
-\includegraphics[width =10cm,height=5cm]{images/user_jumping.png}
-\includegraphics[height=8cm]{images/diagnosis_screen.png} The user will have the option play the game, view details about the makers of the game, of check the results of their data was most recently sent in for processing. If the user selects to play the game they will be presented with a layout similar to FIGURE 2. FIGURE 2 is the basic game, more details may be added later if time permits. The design will be a side scroller game with the user being represented by a character of some sort (a stick figure in FIGURE 2. The user will then have to jump over the black blocks that show up as show in FIGURE 2 as the characters moves from left to right across the screen.  A figure of the user jumping can be seen in FIGURE 3. Once the user has finished playing, their reactions time are uploaded and once their results are received the user will see a screen similar to that of FIGURE 4, where they are notified about their results. The results of our mining of their response time data may become more detailed later on depending upon how accurate we can get with out predictions.
+\begin{figure}[H]
+\centering
+\includegraphics[height=10cm, width = 5cm]{images/intro.png}
+\caption{Menu Screen User uses to navigate}
+\label{fig:intro_image}
+\end{figure}
+
+ Figure 2 is the basic game layout. However, more details may be added later if time permits. The design will be a two-dimensional side scroller game in which the user is represented by a character of some sort (a stick figure in our case in ~\ref{fig:screen_layout}). The user will then have to jump over the black blocks that pop up as the user moves along from left to right. A figure of the user jumping can be seen in ~\ref{fig:user_jumping}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=5cm, width = 8cm]{images/screen_layout.png}
+\caption{Typical screen layout for user playing game}
+\label{fig:screen_layout}
+\end{figure}
+
+ The time it takes from when a block first appears, to the time it takes the user to tap the screen to make their character jump over the block is what we will use as the  measure for reaction time for the game. Once the user has finished playing, their reaction times are uploaded to the server for further processing. Once their results have been processed and the results are received on the user's mobile device, the user will see a screen similar to that of ~\ref{fig:diagnosis_screen}, where they are notified about their results.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=5cm, width = 8cm]{images/user_jumping.png}
+\caption{User will have to jump over the black blocks}
+\label{fig:user_jumping}
+\end{figure}
+
+The results of our data mining of their response time data may become more detailed later on depending upon how accurate we can get with out predictions. For now, we will just have them a low,medium, or high recommendation for getting checking out by a doctor for the possibility of a ADHD diagnosis.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=10cm, width = 5cm]{images/diagnosis_screen.png}
+\caption{Screen where the user can view their results}
+\label{fig:diagnosis_screen}
+\end{figure}
+
+
 \section{Architectural Design Specifications}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Detailed Design Specifications}
@@ -150,7 +176,7 @@ Gameplay results and application data will be stored in a sqlite database locall
 \end{enumerate}
 \item	Overall system
 \begin{enumerate}
-\item	 Response time should be quick. No more than 1 second without feedback to the user on their results. Wait times that are required to be longer than that should show a dialog giving an estimated wait time if possible, and a general spinner waiting dialog if not  to show that the app is retrieving or uploading data (Source: http://www.useit.com/papers/responsetime.html)
+\item	 Response time should be quick. No more than 1 second without feedback to the user on their results. Wait times that are required to be longer than that should show a dialog giving an estimated wait time if possible, and a general spinner waiting dialog if not  to show that the app is retrieving or uploading data [1].
 \item	Availability – System should always be available other than when maintenance is being performed on the server. Test what happens if the system is shut down while a client is actively playing the game and/or uploading the results of their game. Other than when the server/system is down for maintenance, the system should always be up and running and therefore a user playing the game at any time should be able to upload the data from their game at almost any time.
 \item	Security - Normal security measures; to test this we could possibly invite a person with hacking knowledge to attempt to hack the system. Also, gather advice on the security aspects from the security professionals  and ask them what we could do to increase the security of the system.
 \item	Recovery - How does the system respond if the client’s connection is lost when uploading the user’s data to the server?
@@ -180,5 +206,9 @@ v.	Other design goals as needed (as more detail is added to the SRS)
 \end{enumerate}
 
 \section{References}
+[1]Nielson, Jakob. "Response Times: The 3 Important Limits." Nielsen Norman Group. Nielsen Norman Group, 1 Jan. 1993. Web. 23 Oct. 2014.
 \section{Appendices}
+
+\section{Gantt Chart}
+\includegraphics[width=\textwidth]{images/Gantt.png}
 \end{document}

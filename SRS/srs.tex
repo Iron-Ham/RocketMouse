@@ -92,47 +92,49 @@ information gathered and a test of the model can be conducted.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Information Description}
+%@TODO: Add information description section!
 
-\subsection{Entities and Relationships}
-
-Give a list of entities/relationships that are needed,
-and ER diagrams.
-
-\subsection{Data Dictionary}
-
-Give the relations, their attributes, and for each attribute the
-type and a description of the attribute.  Here's an example.
-
-\begin{enumerate}
-\item customers
-
-\centerline{
-\begin{tabular}{|c|c|c|p{3in}|}
-\hline
-account\_no& varchar(8)& primary key& account number\\
-\hline
-name& varchar(20)& not null& Name\\
-\hline
-profession& varchar(10)& not null& Profession\\
-\hline
-address& varchar(40)& not null& Address\\
-\hline
-email& varchar(40)& -& Email Address \\
-\hline
-\end{tabular}
-}
-
-\end{enumerate}
-
-\subsection{Data Flow}
-
-Give data flow between major units of your software.
-E.g.,
-Most useful in case a task has multiple steps requiring interaction
-with other software or other humans.
-E.g. To purchase a book, user can enter request, department head can
-approve, then librarian approves, then order is made.
+% \section{Information Description}
+%
+% \subsection{Entities and Relationships}
+%
+% Give a list of entities/relationships that are needed,
+% and ER diagrams.
+%
+% \subsection{Data Dictionary}
+%
+% Give the relations, their attributes, and for each attribute the
+% type and a description of the attribute.  Here's an example.
+%
+% \begin{enumerate}
+% \item customers
+%
+% \centerline{
+% \begin{tabular}{|c|c|c|p{3in}|}
+% \hline
+% account\_no& varchar(8)& primary key& account number\\
+% \hline
+% name& varchar(20)& not null& Name\\
+% \hline
+% profession& varchar(10)& not null& Profession\\
+% \hline
+% address& varchar(40)& not null& Address\\
+% \hline
+% email& varchar(40)& -& Email Address \\
+% \hline
+% \end{tabular}
+% }
+%
+% \end{enumerate}
+%
+% \subsection{Data Flow}
+%
+% Give data flow between major units of your software.
+% E.g.,
+% Most useful in case a task has multiple steps requiring interaction
+% with other software or other humans.
+% E.g. To purchase a book, user can enter request, department head can
+% approve, then librarian approves, then order is made.
 
 \section{Functional Requirements}
 
@@ -226,22 +228,21 @@ confuse users.
 
 \subsection{User Interfaces}
 
-This used to be important, and required a user manual giving commands
-screen formats, outputs, error messages, etc.
-In your case just say the web is used as interface.
+The application will use the touchscreen interface of the mobile device it is
+installed on.  The primary function will be tapping the screen to jump.
+Secondary functions include navigating the included survey and any menus it may
+be necessary to include.
 
 \subsection{Hardware Interfaces}
 
-Interfaces with existing as well as new or special purpose hardware.
-E.g. smart card reader for authentication.
-In your case say no special hardware.
+Mobile device running a compatible version of the Android operating system or
+iOS.
+
 
 \subsection{Software Interfaces}
 
-List software platforms that are to be supported.
-
-List interfaces with other software packages etc.
-Make sure to list all software that you interface with.
+Android OS versions, including version 4.0 and above.
+iOS versions, including version 7.0 and above.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -249,19 +250,36 @@ Make sure to list all software that you interface with.
 \section{Performance Description}
 
 \subsection{Response Time}
-As this application is measuring user reaction time, the response time will need to be as minimal as possible to allow more precise measurements.  Human reaction time has a limit of about 180 milliseconds.  Our application should have a response time less than 100 milliseconds to be effective.
+As this application is measuring user reaction time, the response time will need
+to be as minimal as possible to allow more precise measurements.  Human reaction
+time has a limit of about 180 milliseconds.  Our application should have a
+response time less than 100 milliseconds to be effective.
 
 \subsection{Processing Time}
-This follows the same constraints as above.  Processing of user input needs to be near instantaneous.  Data that is collected may be transmitted to the database for storage when convenient, for example between games, such that it does not affect the processing of the application.
+This follows the same constraints as above.  Processing of user input needs to
+be near instantaneous.  Data that is collected may be transmitted to the
+database for storage when convenient, for example between games, such that it
+does not affect the processing of the application.
 
 \subsection{Memory Constraints}
-Memory constraints will be minimal due to the nature of the application.  However, this should be verified as the application is intended to be used on mobile devices which have severe constraints to both processing and memory.
+Memory constraints will be minimal due to the nature of the application.
+However, this should be verified as the application is intended to be used on
+mobile devices which have severe constraints to both processing and memory.
 
 \subsection{Security \& Privacy}
-Because of the sensitive nature of some of the data collected the application must be secure and must not store any data locally.  One possible exception is the circumstance when there are multiple users on the same device.  In this case an anonymous identifier will be generated locally to differentiate between users.  Data must be transmitted to a secure database from memory and never stored on disk.
+Because of the sensitive nature of some of the data collected the application
+must be secure and must not store any data locally.  One possible exception is
+the circumstance when there are multiple users on the same device.  In this case
+an anonymous identifier will be generated locally to differentiate between
+users.  Data must be transmitted to a secure database from memory and never
+stored on disk.
 
 \subsection{Storage Requirements}
-A secure database must be present for receiving data transmitted by the application.  The database must be capable of handling transmissions from multiple users at once.  There must also be sufficient space.  At a minimum we would expect 50-100 users, and depending on the popularity of the application, as many as a few hundred.
+A secure database must be present for receiving data transmitted by the
+application.  The database must be capable of handling transmissions from
+multiple users at once.  There must also be sufficient space.  At a minimum we
+would expect 50-100 users, and depending on the popularity of the application,
+as many as a few hundred.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -288,19 +306,14 @@ The code must be versatile enough to put up with null or delayed responses.
 \subsection{Standards Compliance}
 
 Must be Android Compliant, as defined by the \href{http://static.googleusercontent.com/media/source.android.com/en/us/compatibility/4.0/android-4.0-cdd.pdf}{Android Compatibility Definition Document}
+Must also be iOS Compliant, as defined by the \href{https://developer.apple.com/app-store/review/guidelines/}{Apple App Store Guidelines}.
 
 \subsection{Hardware Limitations}
 
-<<<<<<< HEAD
-This application is only targeted at machines running Android version 4.0 or
-higher. An active internet connection is required to send data and usage metrics
-to the server.
-=======
-Requirements on machines, operating systems, storage capacities etc.
-This used to be very important, but these days this matters only
-for very fast/high throughput systems, not so much for the things you
-are doing.
->>>>>>> FETCH_HEAD
+This application is only targeted at iOS devices running iOS version 7.0 or
+higher and Android devices running version 4.0 or higher. The device must have
+networking capability.
+
 
 % @TODO
 % Add space requirements
@@ -325,14 +338,14 @@ user with ADHD.
 \subsection{Testing}
 The mobile application must be able to be run on a variety of Android operating
 systems. Ideally, the application will run on all Android versions greater than
-or equal to Android 4.0 (Android Jelly Bean). The application should pass all
-tests we develop using the monkeyrunner application to test the application for
-possible errors on the mobile application side along with server passing all
-stress tests performed on it. If these tests are passed and the user can
-successfully upload their data and get results back (if enough data is
-available), then the mobile application will pass its acceptance criteria as a
-prototype for an application with the potential for helping to diagnose users
-with ADHD.
+or equal to Android 4.0 (Android Jelly Bean) as well as all iOS devices of
+version 7.0 or greater. The application should pass all tests we develop using
+NUnit to test the application for possible errors on the mobile application side
+along with server passing all stress tests performed on it. If these tests are
+passed and the user can successfully upload their data and get results back (if
+enough data is available), then the mobile application will pass its acceptance
+criteria as a prototype for an application with the potential for helping to
+diagnose users with ADHD.
 
 
 
@@ -379,6 +392,21 @@ Yes, that would be called a work in progress and it's something that's not
 uncommon.  They get accepted for publication just like regular papers.
 
 \section{Functional Model}
-\includegraphics[width=\textwidth]{UseCaseDiagram.png}
+\includegraphics[width=\textwidth]{images/UseCaseDiagram.png}
+\small Fig. 1: Use Case Diagram involving user and server actions
+\section{State Diagram}
+\includegraphics[width=\textwidth]{images/StateDiagram.png}
+Fig. 2: State Diagram for HurdleJumpr
+
+\section{Dynamic Model}
+\includegraphics[width=\textwidth]{images/dynamicModel.png}
+Fig. 3: Dynamic Model for HurdleJumpr
+
+\section{Gantt Chart}
+\includegraphics[width=\textwidth]{images/Gantt.png}
+Fig. 4: Gantt Chart
+
+
+
 
 \end{document}
