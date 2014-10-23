@@ -28,12 +28,110 @@ The design for layout for the user game will be relatively simple. When the user
 \section{Detailed Design Specifications}
 
 \subsection{Interface Specifications}
+\begin{itemize}
+\item public interface SyncInterface\newline
+- Relays the results of the sync to the calling thread.
+\end{itemize}
 
 \subsection{Class Definitions}
+\begin{itemize}
+\item class AddAppsTask extends AsyncTask\newline
+- Adds applications to the main sqlite database.
+\item class AddResultTask extends AsyncTask\newline
+- Adds results from gameplay to the main sqlite database.
+\item class SyncTask extends AsyncTask\newline
+- Syncs the list of applications and gameplay results with the server.
+\item public class SyncService extends Service\newline
+- Controls timed executions of the SyncTask.
+\item public class MainDatabase extends SQLiteOpenHelper\newline
+- Controls thread-safe access to the database.
+\item Request Library\newline
+- The Request Library consists of numerous abstractions for thread creation, tcp communication and object transmission.
+\begin{itemize}
+\item public class Client extends DefaultHttpClient\newline
+- Registers custom ssl connections.
+\item public class ClientManager implements ClientStatusController\newline
+- Abstracts the thread-safe creation of ThreadedClient
+\item public class NameValueBuilder\newline
+- Used to abstract form creation for POST requests.
+\item public class Request\newline
+- Abstracts the creation and execution of threaded network tasks.
+\end{itemize}
+\end{itemize}
+
 
 \subsection{Algorithms}
+Gathering Applications and adding them to the database.
+\begin{lstlisting}
+List<ApplicationInfo> appInfoList = pm.getInstalledApplications(PackageManager.GET_ACTIVITIES);
+List<Application> appList = new ArrayList<Application>();
+for(Application app: appList){
+	mdb.addApp(app);
+}
+\end{lstlisting}
+
+\begin{lstlisting}
+long start = MainDatabase.getHelper(context).getMinimumDate();
+long stop = System.currentTimeMillis();
+		
+boolean didCache = false;	//whether the cache/caches have uploaded properly
+boolean didSync = false;	//whether the current master db/dbs have uploaded properly
+		
+String srcPath = MainDatabase.getHelper(context).getPath();		//file path of the master database
+		
+long startSync = Epoch.getDayEpoch(start);		//floor the requested range to the start of the day
+long stopSync = Epoch.getDayEpoch(stop);
+		
+if(stopSync>System.currentTimeMillis()){		//hopefully not an issue... will check and deny going back to the future.
+	Log.d("CACHE",String.valueOf(didCache));
+	Log.d("SYNC",String.valueOf(didSync));
+	return false;
+}
+if(startSync==stopSync){						//check to see if the upload will be pointless
+	return false;
+}
+
+long cacheStart = startSync;		//make a copy of the start date because we want to manipulate it
+int days = Epoch.getDays(cacheStart,stop,Epoch.MILLIS);		//the total number of days we want to upload
+
+for(int d = 0; d < days; d++){
+    FullParser fp = new FullParser();
+    String dbPath = fp.build(context, (cacheStart), cacheStart + DAYMS);		//completely parse one full day and return the path
+	cacheStart += DAYMS;
+	Log.d("CACHE",d+ " PATH: "+dbPath);
+			
+	//at this point we have a single day cached and ready to upload
+	//we will try up to the value of ATTEMPTS times to upload this file
+			
+	for(int i = 0; i < ATTEMPTS; i++){
+		if(ClientManager.connect().status){						//if we have connected to the server
+			if(ClientManager.cache(dbPath).status){			//if the server says the cache file is ok
+				didCache = true;
+				i = ATTEMPTS;
+			}
+		}
+	}
+	if(!context.deleteDatabase(dbPath)){
+		context.deleteDatabase(dbPath);				//cleanup the file we created
+	}
+}
+		
+//at this point all cache creation and uploads are complete
+
+if(!context.deleteDatabase(tdbPath)){
+context.deleteDatabase(tdbPath);			//cleanup
+}
+
+Log.d("COPY",String.valueOf(didCopy));
+Log.d("CACHE",String.valueOf(didCache));
+Log.d("SYNC",String.valueOf(didSync));
+
+return didCache&&didSync;
+\end{lstlisting}
 
 \subsection{Data file specifications}
+
+Gameplay results and application data will be stored in a sqlite database locally.  That database will sync with our server and will likely be deleted from the device.  One table will be created for the application data and another for the gameplay.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
