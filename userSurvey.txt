@@ -1,0 +1,10 @@
+1. What is your age?
+a. Under 13   b. 13-17  c. 18-24  d. 25-35 e. 36-45 f. 46-59 g. 60+
+2. What is your gender?
+a. Male b. Female
+3. Have you been diagnosed with ADHD?
+a. Yes  b. No
+4. If you answered yes to question 3, are you on medication?
+a. Yes b. No
+5. If you answered yes to question 4, which medication are you on?
+a. Ritalin  b. Adderall or Adderall XR  c. Dexedrine or Dextrostat  d. Vyvanse  e. Ritalin  f. Concerta g. Other (Please Specify)
