@@ -12,5 +12,4 @@ XeLaTex (XeTex) is being used to compile because it supports a wider range of ch
 
 ## Application Development Tools
 
-We are developing using [Unity](http://unity3d.com/unity/multiplatform/mobile). 
-Languages that Unity accepts for Android development are: C/C++, C#, and Java. 
+We are developing using XCode & the Swift Programming Language.
