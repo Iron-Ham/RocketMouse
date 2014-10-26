@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC1AA76519FCEBB4000B15EA /* Reaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA76419FCEBB4000B15EA /* Reaction.swift */; };
 		DC1AA76719FCF079000B15EA /* ReactionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA76619FCF079000B15EA /* ReactionButton.swift */; };
 		DC4C07E919FCCEFB0001C74C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4C07E819FCCEFB0001C74C /* AppDelegate.swift */; };
 		DC4C07EB19FCCEFB0001C74C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4C07EA19FCCEFB0001C74C /* ViewController.swift */; };
@@ -15,6 +14,7 @@
 		DC4C07F019FCCEFB0001C74C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC4C07EF19FCCEFB0001C74C /* Images.xcassets */; };
 		DC4C07F319FCCEFB0001C74C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC4C07F119FCCEFB0001C74C /* LaunchScreen.xib */; };
 		DC4C07FF19FCCEFB0001C74C /* ReactionTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4C07FE19FCCEFB0001C74C /* ReactionTestTests.swift */; };
+		DC60AAD919FD6235004B16DA /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC60AAD819FD6235004B16DA /* GameScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +28,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DC1AA76419FCEBB4000B15EA /* Reaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reaction.swift; sourceTree = "<group>"; };
 		DC1AA76619FCF079000B15EA /* ReactionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReactionButton.swift; path = ../ReactionButton.swift; sourceTree = "<group>"; };
 		DC4C07E319FCCEFB0001C74C /* ReactionTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactionTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC4C07E719FCCEFB0001C74C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,6 +39,7 @@
 		DC4C07F819FCCEFB0001C74C /* ReactionTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactionTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC4C07FD19FCCEFB0001C74C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC4C07FE19FCCEFB0001C74C /* ReactionTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionTestTests.swift; sourceTree = "<group>"; };
+		DC60AAD819FD6235004B16DA /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,11 +84,11 @@
 				DC1AA76619FCF079000B15EA /* ReactionButton.swift */,
 				DC4C07E819FCCEFB0001C74C /* AppDelegate.swift */,
 				DC4C07EA19FCCEFB0001C74C /* ViewController.swift */,
+				DC60AAD819FD6235004B16DA /* GameScene.swift */,
 				DC4C07EC19FCCEFB0001C74C /* Main.storyboard */,
 				DC4C07EF19FCCEFB0001C74C /* Images.xcassets */,
 				DC4C07F119FCCEFB0001C74C /* LaunchScreen.xib */,
 				DC4C07E619FCCEFB0001C74C /* Supporting Files */,
-				DC1AA76419FCEBB4000B15EA /* Reaction.swift */,
 			);
 			path = ReactionTest;
 			sourceTree = "<group>";
@@ -220,7 +220,7 @@
 			files = (
 				DC1AA76719FCF079000B15EA /* ReactionButton.swift in Sources */,
 				DC4C07EB19FCCEFB0001C74C /* ViewController.swift in Sources */,
-				DC1AA76519FCEBB4000B15EA /* Reaction.swift in Sources */,
+				DC60AAD919FD6235004B16DA /* GameScene.swift in Sources */,
 				DC4C07E919FCCEFB0001C74C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
