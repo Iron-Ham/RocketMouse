@@ -144,13 +144,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         monster.runAction(SKAction.sequence([actionMove, actionMoveDone]))
         
     }
-    
+//  @TODO: Change to MonsterDidCollideWithPlayer 
     func projectileDidCollideWithMonster(projectile:SKSpriteNode, monster:SKSpriteNode) {
         println("Hit")
         projectile.removeFromParent()
         monster.removeFromParent()
     }
-    
+//  @TODO: Change physics contact points
     func didBeginContact(contact: SKPhysicsContact) {
         
         var firstBody: SKPhysicsBody
