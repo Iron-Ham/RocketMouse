@@ -24,6 +24,11 @@ class ViewController: UIViewController {
         scene = GameScene(size: skView.bounds.size)
         scene.scaleMode = .AspectFill
         
+        skView.self.backgroundColor = SKColor.clearColor()
+        
+        skView.self.presentScene(scene)
+        
+        scene.self = scene
     }
 
     override func didReceiveMemoryWarning() {

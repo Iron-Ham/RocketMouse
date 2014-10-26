@@ -14,7 +14,7 @@ let TickLengthLevelOne = NSTimeInterval(600)
 
 class GameScene: SKScene{
     
-    let gameLayer = SKNode() 
+    let gameLayer = SKNode()
     
     override func didMoveToView(view: SKView) {
         self.createSceneContents()
