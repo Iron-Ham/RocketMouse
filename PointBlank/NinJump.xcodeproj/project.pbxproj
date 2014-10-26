@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC60ABBE19FDA0D3004B16DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC60ABBD19FDA0D3004B16DA /* AppDelegate.swift */; };
+		DC60ABC219FDA0D3004B16DA /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC60ABC119FDA0D3004B16DA /* GameScene.swift */; };
+		DC60ABC419FDA0D3004B16DA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC60ABC319FDA0D3004B16DA /* GameViewController.swift */; };
+		DC60ABC719FDA0D3004B16DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC60ABC519FDA0D3004B16DA /* Main.storyboard */; };
+		DC60ABC919FDA0D3004B16DA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC60ABC819FDA0D3004B16DA /* Images.xcassets */; };
+		DC60ABCC19FDA0D3004B16DA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC60ABCA19FDA0D3004B16DA /* LaunchScreen.xib */; };
+		DC60ABD819FDA0D3004B16DA /* PointBlankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC60ABD719FDA0D3004B16DA /* PointBlankTests.swift */; };
+		DC60ABE619FDA18F004B16DA /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = DC60ABE319FDA18F004B16DA /* background-music-aac.caf */; };
+		DC60ABE719FDA18F004B16DA /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = DC60ABE419FDA18F004B16DA /* pew-pew-lei.caf */; };
+		DC60ABE819FDA18F004B16DA /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = DC60ABE519FDA18F004B16DA /* sprites.atlas */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC60ABD219FDA0D3004B16DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC60ABB019FDA0D3004B16DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC60ABB719FDA0D3004B16DA;
+			remoteInfo = PointBlank;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DC60ABB819FDA0D3004B16DA /* NinJump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NinJump.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC60ABBC19FDA0D3004B16DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC60ABBD19FDA0D3004B16DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC60ABC119FDA0D3004B16DA /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		DC60ABC319FDA0D3004B16DA /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		DC60ABC619FDA0D3004B16DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC60ABC819FDA0D3004B16DA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DC60ABCB19FDA0D3004B16DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DC60ABD119FDA0D3004B16DA /* NinJumpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NinJumpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC60ABD619FDA0D3004B16DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC60ABD719FDA0D3004B16DA /* PointBlankTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointBlankTests.swift; sourceTree = "<group>"; };
+		DC60ABE319FDA18F004B16DA /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
+		DC60ABE419FDA18F004B16DA /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
+		DC60ABE519FDA18F004B16DA /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC60ABB519FDA0D3004B16DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC60ABCE19FDA0D3004B16DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC60ABAF19FDA0D3004B16DA = {
+			isa = PBXGroup;
+			children = (
+				DC60ABBA19FDA0D3004B16DA /* NinJump */,
+				DC60ABD419FDA0D3004B16DA /* NinJumpTests */,
+				DC60ABB919FDA0D3004B16DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC60ABB919FDA0D3004B16DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC60ABB819FDA0D3004B16DA /* NinJump.app */,
+				DC60ABD119FDA0D3004B16DA /* NinJumpTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC60ABBA19FDA0D3004B16DA /* NinJump */ = {
+			isa = PBXGroup;
+			children = (
+				DC60ABE119FDA18F004B16DA /* SpriteKitSimpleGameResources */,
+				DC60ABBD19FDA0D3004B16DA /* AppDelegate.swift */,
+				DC60ABC119FDA0D3004B16DA /* GameScene.swift */,
+				DC60ABC319FDA0D3004B16DA /* GameViewController.swift */,
+				DC60ABC519FDA0D3004B16DA /* Main.storyboard */,
+				DC60ABC819FDA0D3004B16DA /* Images.xcassets */,
+				DC60ABCA19FDA0D3004B16DA /* LaunchScreen.xib */,
+				DC60ABBB19FDA0D3004B16DA /* Supporting Files */,
+			);
+			name = NinJump;
+			path = PointBlank;
+			sourceTree = "<group>";
+		};
+		DC60ABBB19FDA0D3004B16DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC60ABBC19FDA0D3004B16DA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC60ABD419FDA0D3004B16DA /* NinJumpTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC60ABD719FDA0D3004B16DA /* PointBlankTests.swift */,
+				DC60ABD519FDA0D3004B16DA /* Supporting Files */,
+			);
+			name = NinJumpTests;
+			path = PointBlankTests;
+			sourceTree = "<group>";
+		};
+		DC60ABD519FDA0D3004B16DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC60ABD619FDA0D3004B16DA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC60ABE119FDA18F004B16DA /* SpriteKitSimpleGameResources */ = {
+			isa = PBXGroup;
+			children = (
+				DC60ABE219FDA18F004B16DA /* Sounds */,
+				DC60ABE519FDA18F004B16DA /* sprites.atlas */,
+			);
+			path = SpriteKitSimpleGameResources;
+			sourceTree = "<group>";
+		};
+		DC60ABE219FDA18F004B16DA /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				DC60ABE319FDA18F004B16DA /* background-music-aac.caf */,
+				DC60ABE419FDA18F004B16DA /* pew-pew-lei.caf */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC60ABB719FDA0D3004B16DA /* NinJump */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC60ABDB19FDA0D3004B16DA /* Build configuration list for PBXNativeTarget "NinJump" */;
+			buildPhases = (
+				DC60ABB419FDA0D3004B16DA /* Sources */,
+				DC60ABB519FDA0D3004B16DA /* Frameworks */,
+				DC60ABB619FDA0D3004B16DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NinJump;
+			productName = PointBlank;
+			productReference = DC60ABB819FDA0D3004B16DA /* NinJump.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC60ABD019FDA0D3004B16DA /* NinJumpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC60ABDE19FDA0D3004B16DA /* Build configuration list for PBXNativeTarget "NinJumpTests" */;
+			buildPhases = (
+				DC60ABCD19FDA0D3004B16DA /* Sources */,
+				DC60ABCE19FDA0D3004B16DA /* Frameworks */,
+				DC60ABCF19FDA0D3004B16DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC60ABD319FDA0D3004B16DA /* PBXTargetDependency */,
+			);
+			name = NinJumpTests;
+			productName = PointBlankTests;
+			productReference = DC60ABD119FDA0D3004B16DA /* NinJumpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC60ABB019FDA0D3004B16DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Hesham Salman";
+				TargetAttributes = {
+					DC60ABB719FDA0D3004B16DA = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					DC60ABD019FDA0D3004B16DA = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = DC60ABB719FDA0D3004B16DA;
+					};
+				};
+			};
+			buildConfigurationList = DC60ABB319FDA0D3004B16DA /* Build configuration list for PBXProject "NinJump" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC60ABAF19FDA0D3004B16DA;
+			productRefGroup = DC60ABB919FDA0D3004B16DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC60ABB719FDA0D3004B16DA /* NinJump */,
+				DC60ABD019FDA0D3004B16DA /* NinJumpTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC60ABB619FDA0D3004B16DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC60ABE819FDA18F004B16DA /* sprites.atlas in Resources */,
+				DC60ABE619FDA18F004B16DA /* background-music-aac.caf in Resources */,
+				DC60ABCC19FDA0D3004B16DA /* LaunchScreen.xib in Resources */,
+				DC60ABC919FDA0D3004B16DA /* Images.xcassets in Resources */,
+				DC60ABC719FDA0D3004B16DA /* Main.storyboard in Resources */,
+				DC60ABE719FDA18F004B16DA /* pew-pew-lei.caf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC60ABCF19FDA0D3004B16DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC60ABB419FDA0D3004B16DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC60ABC219FDA0D3004B16DA /* GameScene.swift in Sources */,
+				DC60ABC419FDA0D3004B16DA /* GameViewController.swift in Sources */,
+				DC60ABBE19FDA0D3004B16DA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC60ABCD19FDA0D3004B16DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC60ABD819FDA0D3004B16DA /* PointBlankTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC60ABD319FDA0D3004B16DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC60ABB719FDA0D3004B16DA /* NinJump */;
+			targetProxy = DC60ABD219FDA0D3004B16DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DC60ABC519FDA0D3004B16DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC60ABC619FDA0D3004B16DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC60ABCA19FDA0D3004B16DA /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC60ABCB19FDA0D3004B16DA /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC60ABD919FDA0D3004B16DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC60ABDA19FDA0D3004B16DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC60ABDC19FDA0D3004B16DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PointBlank/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = NinJump;
+			};
+			name = Debug;
+		};
+		DC60ABDD19FDA0D3004B16DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PointBlank/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = NinJump;
+			};
+			name = Release;
+		};
+		DC60ABDF19FDA0D3004B16DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PointBlankTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = NinJumpTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PointBlank.app/PointBlank";
+			};
+			name = Debug;
+		};
+		DC60ABE019FDA0D3004B16DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PointBlankTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = NinJumpTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PointBlank.app/PointBlank";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC60ABB319FDA0D3004B16DA /* Build configuration list for PBXProject "NinJump" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC60ABD919FDA0D3004B16DA /* Debug */,
+				DC60ABDA19FDA0D3004B16DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC60ABDB19FDA0D3004B16DA /* Build configuration list for PBXNativeTarget "NinJump" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC60ABDC19FDA0D3004B16DA /* Debug */,
+				DC60ABDD19FDA0D3004B16DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DC60ABDE19FDA0D3004B16DA /* Build configuration list for PBXNativeTarget "NinJumpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC60ABDF19FDA0D3004B16DA /* Debug */,
+				DC60ABE019FDA0D3004B16DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC60ABB019FDA0D3004B16DA /* Project object */;
+}
