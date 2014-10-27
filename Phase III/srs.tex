@@ -4,55 +4,27 @@
 \newcommand{\comment}[1]{{\tt #1}}
 \usepackage{graphicx}
 \usepackage{listings}
-
-\title{HurdleJumpr:\\ OO Software System Design}
+\usepackage[section]{placeins}
+\title{RocketMouse:\\ OO Software System Design}
 
 \author{Hesham H. Salman \and Jonathon Kissinger \and Sean Mead \and Troy Johnson}
 
 \begin{document}
 \maketitle
 
-\begin{figure}[H]
-\centering
-\includegraphics[height=10cm, width = 5cm]{images/intro.png}
-\caption{Menu Screen User uses to navigate}
-\label{fig:intro_image}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[height=5cm, width = 8cm]{images/screen_layout.png}
-\caption{Typical screen layout for user playing game}
-\label{fig:screen_layout}
-\end{figure}
 
 \section{External Design Specifications}
-The design for layout for the user game will be relatively simple. When the user launches the game, they will be presented with the menu in figure ~\ref{fig:intro_image} in the appendices. This menu will give the user several options. The user will have the option play the game, view details about the creators of the game, and check the results of their data that was most recently sent in for processing. If the user selects to play the game, they will be presented with a layout similar to that of figure ~\ref{fig:screen_layout} in the appendices. This is the game layout the user will be presented with when they select the button to start actually playing the game.
+The design for layout for the user game will be relatively simple. When the user launches the game, if they have already filled out the initial survey, they will be presented with the menu in figure ~\ref{fig:intro_image} in the appendices. If the user hasn't filled out the initial survey, they are presented with a survey they must fill out before navigating to the menu in figure ~\ref{fig:intro_image}. This menu will give the user several options. The user will have the option play the game, view details about the creators of the game, and check the results of their data that was most recently sent in for processing. If the user selects to play the game, they will be presented with a layout similar to that of figure ~\ref{fig:screen_layout} in the appendices. This is the game layout the user will be presented with when they select the button to start actually playing the game.
 
 
 
-Figure ~\ref{fig:screen_layout} is the basic game layout. However, more details may be added later if time permits. The design will be a two-dimensional side scroller game in which the user is represented by a character of some sort (a stick figure in our case in figure ~\ref{fig:screen_layout}). The user will then have to jump over the black blocks that pop up as the user moves along from left to right across the screen. A figure of the user jumping can be seen in figure ~\ref{fig:user_jumping}.
+Figure ~\ref{fig:screen_layout} in the appendices is the basic game layout. However, more details may be added later if time permits. The design will be a two-dimensional side scroller game in which the user is represented by a character of some sort (a stick figure in our case in figure ~\ref{fig:screen_layout}) in the appendices. The user will then have to jump over some type of object that pops up as the user moves along from left to right across the screen. A figure of the user jumping can be seen in figure ~\ref{fig:user_jumping} in the appendices.
 
 
 
- The time it takes from when a block first appears, to the time it takes the user to tap the screen to make their character jump over the block is what we will use as the  measure for reaction time for the user. Once the user has finished playing, their reaction times are uploaded to the server for further processing. Once their results have been processed and analyzed and the results are received on the user's mobile device, the user will see a screen similar to that of figure ~\ref{fig:diagnosis_screen}, where they are notified about their results.
+ The time it takes from when a block first appears, to the time it takes the user to tap the screen to make their character jump over the block is what we will use as the  measure for reaction time for the user. Once the user has finished playing, their reaction times are uploaded to the server for further processing. Once their results have been processed and analyzed and the results are received on the user's mobile device, the user will see a screen similar to that of figure ~\ref{fig:diagnosis_screen} in the appendices, where they are notified about their results.
 
-\begin{figure}[H]
-\centering
-\includegraphics[height=5cm, width = 8cm]{images/user_jumping.png}
-\caption{User will have to jump over the black blocks}
-\label{fig:user_jumping}
-\end{figure}
-
-The results of our data mining of their response time data may become more detailed later on depending upon how accurate we can get with out predictions. For now, we will just have them a low,medium, or high recommendation for getting checking out by a doctor for the possibility of a ADHD diagnosis.
-
-\begin{figure}[H]
-\centering
-\includegraphics[height=10cm, width = 5cm]{images/diagnosis_screen.png}
-\caption{Screen where the user can view their results}
-\label{fig:diagnosis_screen}
-\end{figure}
-
+The results of our data mining of their response time data may become more detailed later on depending upon how accurate we can get with our prediction models. For now, we will just have them a low,medium, or high recommendation for getting checking out by a doctor for the possibility of a ADHD diagnosis.
 
 \section{Architectural Design Specifications}
 
@@ -61,10 +33,10 @@ The results of our data mining of their response time data may become more detai
 \small Fig. 1: Use Case Diagram involving user and server actions
 \subsection{State Diagram}
 \includegraphics[width=\textwidth]{images/StateDiagram.png}
-Fig. 2: State Diagram for HurdleJumpr
+Fig. 2: State Diagram for RocketMouse
 \subsection{Dynamic Model}
 \includegraphics[width=\textwidth]{images/dynamicModel.png}
-Fig. 3: Dynamic Model for HurdleJumpr
+Fig. 3: Dynamic Model for RocketMouse
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Detailed Design Specifications}
 
@@ -186,7 +158,7 @@ Gameplay results and application data will be stored in a sqlite database locall
 \begin{enumerate}
 \item	Ease of use - Ask those unfamiliar with the project, and no more than a beginner’s knowledge of the game to attempt to play the game. Ask user on how they think the game could be improved or what may have confused them.
 \item	Ease of use on touch device – Make sure icons work fine on touch devices, i.e, make sure that all click-able icons that are used, aren't so small that a user with rather large fingers would have trouble playing the game.
-\item	Compatibility with other Android operating system versions – Mobile game application should be compatible with at least Android Jelly Bean (Android 4.0) or higher. This means that the mobile game will have to be tested on mobile devices with Android Jelly Bean, Android Kit Kat, and possibly Android L (if released in time).
+\item	Compatibility with other iOS operating system versions – Mobile game application should be compatible with at least iOS 8.0 or higher. This means that the mobile game will have to be tested on mobile devices with a variety of iOS version above 8.0.
 \item 	Other design goals as needed (as more detail is added to the SRS)
 \end{enumerate}
 \item	Overall system
@@ -201,9 +173,9 @@ v.	Other design goals as needed (as more detail is added to the SRS)
 \item	Stress tests
 \begin{enumerate}
 \item	Manual - A test where 10 (hopefully more depending on how many testers we can get) logged-in users perform the same functions and see if any wait times or ramp up times occur. This test will help determine how the server reacts to periods of time where many people may be submitting their response time data to the server at the same time for processing.
-\item	Automatic – Set up a testing scenario with some open source software testing tool that can simulate as many simultaneous connections as needed (hundreds? thousands?), similar to an integration test. This can method can also be used to determine the maximum number of concurrent users that the server can support under a given configuration.
-\item	Automatic (Similar style as mentioned in b) – Perform a long-running stress test that drives a continuous load on the server for an extended period of time.  (Due to time constraints “long-running” may only consist of a week at most) The main purpose of this type of test would be to ensure the server accepting the data can sustain acceptable levels of performance over an extended period of time without exhibiting any slowdowns.
-\item	User monkeyrunner to simulate thousands of pseudo random presses in places on the game and see if the application can handle it or to see if it crashes the application.
+\item	Automatic - Set up a testing scenario with some open source software testing tool that can simulate as many simultaneous connections as needed (hundreds? thousands?), similar to an integration test. This can method can also be used to determine the maximum number of concurrent users that the server can support under a given configuration.
+\item	Automatic - (Similar style as mentioned in b) – Perform a long-running stress test that drives a continuous load on the server for an extended period of time.  (Due to time constraints “long-running” may only consist of a week at most) The main purpose of this type of test would be to ensure the server accepting the data can sustain acceptable levels of performance over an extended period of time without exhibiting any slowdowns.
+\item	Use anteater to simulate thousands of pseudo random presses in places on the game screen and see if the application can handle it or to see if it crashes the application.
 \end{enumerate}
 \end{enumerate}
 3.	Functional tests
@@ -215,7 +187,7 @@ v.	Other design goals as needed (as more detail is added to the SRS)
 \item	User uploads their same data to the server multiple times.
 \item	User is the first to submit their data to the server (no data to compare against to help determine ADHD diagnosis).
 \item	User quits in the middle of the game, make sure data isn’t submitted.
-\item	User doesn’t give permission to upload their information.
+\item	User doesn't give permission to upload their information.
 
 \end{enumerate}
 \end{enumerate}
@@ -224,6 +196,35 @@ v.	Other design goals as needed (as more detail is added to the SRS)
 \section{References}
 [1]Nielson, Jakob. "Response Times: The 3 Important Limits." Nielsen Norman Group. Nielsen Norman Group, 1 Jan. 1993. Web. 23 Oct. 2014.
 \section{Appendices}
+
+\begin{figure}
+\centering
+\includegraphics[height=10cm, width = 5cm]{images/intro.png}
+\caption{Menu screen user uses to navigate}
+\label{fig:intro_image}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics[height=5cm, width = 8cm]{images/screen_layout.png}
+\caption{Typical screen layout for user playing game}
+\label{fig:screen_layout}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[height=5cm, width = 8cm]{images/user_jumping.png}
+\caption{User will have to jump over some type of objects}
+\label{fig:user_jumping}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[height=10cm, width = 5cm]{images/diagnosis_screen.png}
+\caption{Screen where the user can view their results}
+\label{fig:diagnosis_screen}
+\end{figure}
 
 \section{Gantt Chart}
 \includegraphics[width=\textwidth]{images/Gantt.png}
