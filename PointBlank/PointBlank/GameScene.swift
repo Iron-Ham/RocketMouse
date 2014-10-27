@@ -82,13 +82,14 @@ extension CGPoint {
 //    @TODO Give player jump ability
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    let player = SKSpriteNode(imageNamed: "player")
+    let player = SKSpriteNode(imageNamed: "RocketMouse_1024")
     
     
     override func didMoveToView(view: SKView) {
         
         playBackgroundMusic("background-music-aac.caf")
         backgroundColor = SKColor.whiteColor()
+        player.size = CGSize(width: player.size.width/10, height: player.size.height/10)
         player.position = CGPoint(x: size.width * 0.1, y: size.height * 0.5)
         player.physicsBody = SKPhysicsBody(rectangleOfSize: player.size)
         player.physicsBody?.dynamic = true
@@ -105,7 +106,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         runAction(SKAction.repeatActionForever(
             SKAction.sequence([
                 SKAction.runBlock(addMonster),
-                SKAction.waitForDuration(4.0)
+                SKAction.waitForDuration(2.5)
                 ])
             ))
     }
@@ -125,7 +126,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func addMonster() {
         
         // Create sprite
-        let monster = SKSpriteNode(imageNamed: "monster")
+        let monster = SKSpriteNode(imageNamed: "ant_stand")
         
         monster.physicsBody = SKPhysicsBody(rectangleOfSize: monster.size)
         monster.physicsBody?.dynamic = true
