@@ -5,7 +5,7 @@
 \usepackage{hyperref}
 \newcommand{\comment}[1]{{\tt #1}}
 
-\title{HurdleJumpr:\\ System Requirements Specification}
+\title{RocketMouse:\\ System Requirements Specification}
 
 \author{Hesham H. Salman \and Jonathan Kissinger \and Sean Mead
 \and Troy Johnson}
@@ -16,29 +16,20 @@
 \section{Introduction}
 
 \subsection{Overall Description}
-
-HurdleJumpr tracks user inputs and behavioral patterns, and uses this data to
+\indent RocketMouse tracks the user inputs and behavioral patterns of a user playing a mobile game, and uses this data to
 determine whether or not the user is likely to have ADHD. This is determined by
 comparing the user response times and input patterns to those of people with and
 without ADHD. If the application can determine with a high level of confidence
 that the user is likely to have ADHD, a suggestion is made to the user to visit
 a medical professional. \par
-This application is to be used by a number of people with and without ADHD so
-that we may test its detection algorithms.
+This application is designed to be used by a number of people with and without ADHD so that we may test it's detection algorithms and the accuracy of those ADHD detection algorithms.
 
-% \subsection{Definitions}
-%
-% Acronyms and abbreviations as applicable
-%
-% \subsection{References}
-%
-% References to other documents
 
 \subsection{Overview of Developer's Responsibilities}
 
-The developer is responsible for development and deployment of the HurdleJumpr
-application to Android systems. The developer is responsible for the maintenance
-of the the system with regards to new feature development and bug fixes.
+The developer is responsible for development and deployment of the RocketMouse
+application to iOS systems. The developer is responsible for the maintenance
+of the system with regards to new feature development and bug fixes. The developer is also responsible for looking for new trends in the data that may be able to point towards new indications of somebody who has ADHD.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -46,14 +37,14 @@ of the the system with regards to new feature development and bug fixes.
 
 \subsection{Survey}
 
-The user survey is loaded at the applications's initial screen.
-The user is responsible for filling out the questions to the best of their ability.
+The user survey is loaded during the applications's initial launch screen.
+The user is responsible for filling out the questions to the best of their ability in order to receive as accurate results as possible.
 The survey will be submitted and uploaded to the server upon completion. 
 
 \subsection{Server}
 
 The server is responsible for accepting user submission information and introducing it to the database.
-Communication between the server and clients will be encrypted and as secure as possible to protect any sensitive information.
+Communication between the server and clients will be encrypted and as secure as possible to protect any sensitive information. The server is also responsible for parsing the uploading data, processing it, and coming up with some kind of feedback for the user, if enough data has already been previously submitted.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -61,16 +52,15 @@ Communication between the server and clients will be encrypted and as secure as 
 
 \subsection{Product Perspective}
 
-HurdlJumpr is a game that collects the user's response times and usage metrics.
+RocketMouse is a game that collects the user's response times and usage metrics.
 The information collected is stored in a local database, anonymized, and sent to
 a remote server for data processing. The data processing feeds information for
-calibration of a model that aims to predict the likelihood of a user having
-ADHD.
+calibration of a model that aims to predict the likelihood of a user having ADHD.
 
 \subsection{Product Functions Overview}
 
 \begin{enumerate}
-\item Game Functionality: HurdlJumpr
+\item Game Functionality: RocketMouse
 \item User input tracking and data collection
 \item Data processing to determine whether or not the user has ADHD
 \item Result generation
@@ -86,55 +76,11 @@ distinction made between users that are medicated and unmedicated.
 
 \subsection{General Constraints}
 
-This project is to be completed to the extent that data has been collected by
+This project is to be completed to the extent that some data has been collected by
 November 30, 2014. Once data has been collected, a model can be created from the
 information gathered and a test of the model can be conducted.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%@TODO: Add information description section!
-
-% \section{Information Description}
-%
-% \subsection{Entities and Relationships}
-%
-% Give a list of entities/relationships that are needed,
-% and ER diagrams.
-%
-% \subsection{Data Dictionary}
-%
-% Give the relations, their attributes, and for each attribute the
-% type and a description of the attribute.  Here's an example.
-%
-% \begin{enumerate}
-% \item customers
-%
-% \centerline{
-% \begin{tabular}{|c|c|c|p{3in}|}
-% \hline
-% account\_no& varchar(8)& primary key& account number\\
-% \hline
-% name& varchar(20)& not null& Name\\
-% \hline
-% profession& varchar(10)& not null& Profession\\
-% \hline
-% address& varchar(40)& not null& Address\\
-% \hline
-% email& varchar(40)& -& Email Address \\
-% \hline
-% \end{tabular}
-% }
-%
-% \end{enumerate}
-%
-% \subsection{Data Flow}
-%
-% Give data flow between major units of your software.
-% E.g.,
-% Most useful in case a task has multiple steps requiring interaction
-% with other software or other humans.
-% E.g. To purchase a book, user can enter request, department head can
-% approve, then librarian approves, then order is made.
 
 \section{Functional Requirements}
 
@@ -151,14 +97,14 @@ information gathered and a test of the model can be conducted.
 
 
 \subsection{Introductory User Survey}
-The introductory user survey is displayed on first load of the program. It must
-be completed before the home screen is allowed to display. The introductory user
-survey establishes information to better understand the user's state: whether or
+The introductory user survey is displayed on the first load of the mobile application. It must
+be completed before the home screen is allowed to display and the user allowed to play the game. The introductory user
+survey establishes information to better understand the user's state, this includes: whether or
 not they have been diagnosed with ADHD (and if they have, whether or not they
 are currently taking medicine), their age, and their gender. This information is
 required so that the calculations regarding the likelihood of ADHD are accurate.
 In the case that the user does not complete the survey, their incomplete
-survey's state is saved, and will be loaded upon re-launch of the program.
+survey state is saved, and will be loaded upon re-launch of the program.
 
 \subsection{Home Screen}
 The home screen must display two navigation options to the user: the option to
@@ -214,8 +160,8 @@ encourage usage
 \item Enhanceable -- the system must allow for enhancement without major code
 rewrites or architectural changes; coupling must be limited
 \item Reusable -- the components of the system should be reusable
-\item Stable -- the system msut be stable on all target versions of Android
-\item Good performance -- the system should provide good perfomance on all
+\item Stable -- the system must be stable on all target versions of iOS 8.0 or greater
+\item Good performance -- the system should provide good performance on all
 targeted platforms
 \item Responsive -- the system should respond to user actions immediately.
 \item Clean interface -- the interface should be simple and clean so as to not
@@ -230,17 +176,17 @@ confuse users.
 
 The application will use the touchscreen interface of the mobile device it is
 installed on.  The primary function will be tapping the screen to jump.
-Secondary functions include navigating the included survey and any menus it may
+Secondary functions include navigating the included survey and any menus that may
 be necessary to include.
 
 \subsection{Hardware Interfaces}
 
-Mobile device running a compatible version of the Android operating system.
+Mobile device running a compatible version of the iOS operating system that is greater than or equal to 8.0.
 
 
 \subsection{Software Interfaces}
 
-Android OS versions, including version 4.0 and above.
+iOS versions, including version 8.0 and above.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -265,9 +211,9 @@ However, this should be verified as the application is intended to be used on
 mobile devices which have severe constraints to both processing and memory.
 
 \subsection{Security \& Privacy}
-Because of the sensitive nature of some of the data collected the application
+Because of the sensitive nature of some of the data collected, the application
 must be secure and must not store any data locally.  One possible exception is
-the circumstance when there are multiple users on the same device.  In this case
+the circumstance when there are multiple users on the same device.  In this case,
 an anonymous identifier will be generated locally to differentiate between
 users.  Data must be transmitted to a secure database from memory and never
 stored on disk.
@@ -303,17 +249,12 @@ The code must be versatile enough to put up with null or delayed responses.
 
 \subsection{Standards Compliance}
 
-Must be Android Compliant, as defined by the \href{http://static.googleusercontent.com/media/source.android.com/en/us/compatibility/4.0/android-4.0-cdd.pdf}{Android Compatibility Definition Document}
+Must be iOS Compliant, as defined in [1]. [1] also provides the complete process for uploading a mobile application to the iTunes store, submitting apps for review, and pretty much anything else associated with submitting a mobile iOS application to iTunes.
 
 \subsection{Hardware Limitations}
 
-This application is only targeted at Android devices running version 4.0 or 
-higher. The device must have networking capability.
-
-
-% @TODO
-% Add space requirements
-% Add Hardware Requirements
+This application is only targeted at iOS devices running version 8.0 or 
+higher. The device must have networking capability in order to upload data for processing and to receive the results of the data processing.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -326,32 +267,31 @@ documented and clearly readable. The documentation should adequately describe
 what is occurring within the code in a clear and concise manner. The code should
 also be as loosely coupled as possible to allow desirable changes to be easily
 made to the code and to also reduce the possibility of errors cropping up when
-a developer wants to make changes to the code base. This is important especially
-on the server side as the algorithm for determining the possibility of ADHD may
+a developer wants to make changes to the code base. This is important, especially
+on the server side, as the algorithm for determining the possibility of ADHD may
 be constantly changing and refined over time as more and more data becomes
 available and new patterns in the data are picked up on that may help diagnose a
 user with ADHD.
 \subsection{Testing}
-The mobile application must be able to be run on a variety of Android operating
-systems. Ideally, the application will run on all Android versions greater than
-or equal to Android 4.0 (Android Jelly Bean). The application should pass all 
+The mobile application must be able to be run on a variety of iOS operating
+systems. Ideally, the application will run on all iOS versions greater than
+or equal to iOS 8.0. The application should pass all 
 tests we develop using NUnit to test the application for possible errors on the 
 mobile application side along with server passing all stress tests performed on 
-it. If these tests are passed and the user can successfully upload their data and
+it. If these tests are passed, and the user can successfully upload their data and
 get results back (if enough data is available), then the mobile application will 
 pass its acceptance criteria as a prototype for an application with the potential 
 for helping to diagnose users with ADHD.
 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Other Requirements}
 \newpage
 \appendix
 \appendixpage
 
-\section{Information Gathering}
+\section{References}
+[1]Apple Inc. "ITunes Connect Developer Guide." : Submitting the App to App Review. Apple Inc, 24 Oct. 2014. Web. 27 Oct. 2014.
 
 \begin{description}
 \item[Interviewee] Dr. Tony Morelli
@@ -391,11 +331,11 @@ uncommon.  They get accepted for publication just like regular papers.
 \small Fig. 1: Use Case Diagram involving user and server actions
 \section{State Diagram}
 \includegraphics[width=\textwidth]{images/StateDiagram.png}
-Fig. 2: State Diagram for HurdleJumpr
+Fig. 2: State Diagram for RocketMouse
 
 \section{Dynamic Model}
 \includegraphics[width=\textwidth]{images/dynamicModel.png}
-Fig. 3: Dynamic Model for HurdleJumpr
+Fig. 3: Dynamic Model for RocketMouse
 
 \section{Gantt Chart}
 \includegraphics[width=\textwidth]{images/Gantt.png}
