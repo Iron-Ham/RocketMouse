@@ -82,15 +82,19 @@ extension CGPoint {
 //    @TODO Give player jump ability
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
+    let background = SKSpriteNode(imageNamed: "BG_Jungle_hor_rpt_1920x768")
+    
     let player = SKSpriteNode(imageNamed: "RocketMouse_1024")
     
     
     override func didMoveToView(view: SKView) {
-        
+        background.size = CGSize(width: background.size.width, height: size.height)
+        background.position = CGPoint(x: 0, y: size.height/2)
+        addChild(background)
         playBackgroundMusic("background-music-aac.caf")
         backgroundColor = SKColor.whiteColor()
         player.size = CGSize(width: player.size.width/10, height: player.size.height/10)
-        player.position = CGPoint(x: size.width * 0.1, y: size.height * 0.5)
+        player.position = CGPoint(x: size.width * 0.1, y: size.height * 0.3)
         player.physicsBody = SKPhysicsBody(rectangleOfSize: player.size)
         player.physicsBody?.dynamic = true
         player.physicsBody?.categoryBitMask = PhysicsCategory.Player
@@ -137,7 +141,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         // Determine where to spawn the monster along the Y axis
-        let actualY = size.height/2
+        let actualY = size.height * 0.3
         
         // Position the monster slightly off-screen along the right edge,
         // and along a random position along the Y axis as calculated above
