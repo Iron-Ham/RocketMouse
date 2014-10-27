@@ -184,7 +184,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
 //    @TODO Add collision points between player and monsters. Set that to be the lose condition.
-    
+//    Set jump command to occur on touch here
     override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
         
         runAction(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
@@ -192,24 +192,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // 1 - Choose one of the touches to work with
         let touch = touches.anyObject() as UITouch
         let touchLocation = touch.locationInNode(self)
-        
-        // 2 - Set up initial location of projectile
-        
-        
-        // 3 - Determine offset of location to projectile
-        
-        // 4 - Bail out if you are shooting down or backwards
-        
-        // 5 - OK to add now - you've double checked position
-        
-        // 6 - Get the direction of where to shoot
-        
-        // 7 - Make it shoot far enough to be guaranteed off screen
-        
-        // 8 - Add the shoot amount to the current position
-        
-        // 9 - Create the actions
-
         
     }
     
