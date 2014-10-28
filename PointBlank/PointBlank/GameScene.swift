@@ -221,7 +221,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let actionMove = SKAction.moveTo(CGPoint(x: size.width * 0.1, y: size.height * 0.85), duration: 0.3)
         let actionFall = SKAction.moveTo(CGPoint(x: size.width * 0.1, y: size.height * 0.3), duration: 0.3)
         actionMove.timingMode = SKActionTimingMode.EaseIn
-        actionMove.timingMode = SKActionTimingMode.EaseOut
+        actionFall.timingMode = SKActionTimingMode.EaseOut
         
         if CACurrentMediaTime() - time > 0.7 {
             player.runAction(SKAction.sequence([actionMove, actionFall]))
