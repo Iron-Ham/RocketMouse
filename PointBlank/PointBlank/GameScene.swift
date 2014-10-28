@@ -197,24 +197,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //runAction(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
 
-        if (player.position.y == size.height * 0.3){
-            jump();
-        }
-        
         // 1 - Choose one of the touches to work with
         let touch = touches.anyObject() as UITouch
         let touchLocation = touch.locationInNode(self)
         
-        println(touch)
+        let actionMove = SKAction.moveTo(CGPoint(x: size.width * 0.1, y: size.height * 0.7), duration: 0.3)
+        let actionFall = SKAction.moveTo(CGPoint(x: size.width * 0.1, y: size.height * 0.3), duration: 0.3)
+        player.runAction(SKAction.sequence([actionMove, actionFall]))
         
     }
-    
-    func jump(){
-        let actionJump = SKAction.moveTo(CGPoint(x: player.position.x, y: size.height * jumpHeight), duration: NSTimeInterval(jumpSpeed))
-        let actionGravity = SKAction.moveTo(CGPoint(x: player.position.x, y: size.height * 0.3), duration: NSTimeInterval(fallSpeed))
-        
-        player.runAction(actionJump, completion: {self.player.runAction(actionGravity)})
-    }
-    
     
 }
