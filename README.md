@@ -1,5 +1,5 @@
-#HurdleJumpr
-The home of the HurdleJumpr project.
+#RocketMouse
+The home of the RocketMouse project.
 
 ## SRS
 
