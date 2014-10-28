@@ -15,3 +15,9 @@ XeLaTex (XeTex) is being used to compile because it supports a wider range of ch
 We are developing using XCode & the Swift Programming Language.
 For a primer on SpriteKit, please visit [Apple's SpriteKit Guide](https://developer.apple.com/library/ios/documentation/GraphicsAnimation/Conceptual/SpriteKit_PG/Introduction/Introduction.html) and [framework reference](https://developer.apple.com/library/IOs/documentation/SpriteKit/Reference/SpriteKitFramework_Ref/index.html). 
 Also in use is the UIKit and AVFoundation, but required knowledge of these frameworks is minimal. 
+
+## Server Address
+
+http://cps-hccdev.cps.cmich.edu
+
+Other relevant URL's to be added.
