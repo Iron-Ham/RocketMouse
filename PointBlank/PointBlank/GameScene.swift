@@ -98,7 +98,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         backgroundColor = SKColor.whiteColor()
         player.size = CGSize(width: player.size.width/10, height: player.size.height/10)
         player.position = CGPoint(x: size.width * 0.1, y: size.height * 0.3)
-        player.physicsBody = SKPhysicsBody(rectangleOfSize: player.size)
+        player.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: player.size.width * 0.8, height: player.size.height))
         player.physicsBody?.dynamic = true
         player.physicsBody?.categoryBitMask = PhysicsCategory.Player
         player.physicsBody?.contactTestBitMask = PhysicsCategory.Monster
@@ -154,7 +154,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(monster)
         
         // Determine speed of the monster
-        let actualDuration = random(min: CGFloat(2.0), max: CGFloat(4.0))
+        let actualDuration = random(min: CGFloat(0.5), max: CGFloat(1.5))
         
         // Create the actions
         let actionMove = SKAction.moveTo(CGPoint(x: -monster.size.width/2, y: actualY), duration: NSTimeInterval(actualDuration))
@@ -193,6 +193,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
 //    @TODO Add collision points between player and monsters. Set that to be the lose condition.
 //    Set jump command to occur on touch here
+    var time = CACurrentMediaTime()
     override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
         
         //runAction(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
@@ -201,10 +202,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let touch = touches.anyObject() as UITouch
         let touchLocation = touch.locationInNode(self)
         
-        let actionMove = SKAction.moveTo(CGPoint(x: size.width * 0.1, y: size.height * 0.7), duration: 0.3)
+       
+        // There is definitely a better way to do easing than this, but I'm not sure of how yet.
+        let actionMove = SKAction.moveTo(CGPoint(x: size.width * 0.1, y: size.height * 0.85), duration: 0.3)
         let actionFall = SKAction.moveTo(CGPoint(x: size.width * 0.1, y: size.height * 0.3), duration: 0.3)
-        player.runAction(SKAction.sequence([actionMove, actionFall]))
+        actionMove.timingMode = SKActionTimingMode.EaseIn
+        actionMove.timingMode = SKActionTimingMode.EaseOut
         
+        if CACurrentMediaTime() - time > 0.7 {
+            player.runAction(SKAction.sequence([actionMove, actionFall]))
+            time = CACurrentMediaTime()
+        }
     }
     
 }
