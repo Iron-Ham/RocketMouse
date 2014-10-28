@@ -96,6 +96,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(background)
         playBackgroundMusic("background-music-aac.caf")
         backgroundColor = SKColor.whiteColor()
+        
         player.size = CGSize(width: player.size.width/10, height: player.size.height/10)
         player.position = CGPoint(x: size.width * 0.1, y: size.height * 0.3)
         player.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: player.size.width * 0.8, height: player.size.height))
@@ -125,7 +126,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func random(#min: CGFloat, max: CGFloat) -> CGFloat {
-        return random() * (max - min) + min
+        var generatedValue = random()
+        if generatedValue > 0 && generatedValue <= 0.2 {
+            return min
+        } else if generatedValue > 0.2 && generatedValue <= 0.3 {
+            return (max - min)/2
+        } else if generatedValue > 0.3 && generatedValue <= 0.7{
+            return (max - min)
+        } else if generatedValue > 0.7 && generatedValue <= 0.8{
+            return (max - min)/2 + max - min
+        } else {
+            return max
+        }
     }
     
     
@@ -154,6 +166,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(monster)
         
         // Determine speed of the monster
+        
+        
         let actualDuration = random(min: CGFloat(0.5), max: CGFloat(1.5))
         
         // Create the actions
