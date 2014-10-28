@@ -1,0 +1,60 @@
+Base path: /Applications/Unity/Unity.app/Contents
+Pipe name: \\.\pipe\UnityShaderCompiler-2--1331417088
+Cmd: getPlatforms
+Cmd: compileSnippet
+  api=9 type=0 insize=5046 outsize=3648 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=5046 outsize=5433 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=5046 outsize=5271 kw=DIRECTIONAL SHADOWS_SCREEN SHADOWS_NATIVE LIGHTMAP_OFF DIRLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
+Cmd: compileSnippet
+  api=5 type=1 insize=5046 outsize=6 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=19254 outsize=4033 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=19237 outsize=660 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=19253 outsize=7 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=19251 outsize=2031 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=19247 outsize=7 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=19250 outsize=7 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=19245 outsize=3749 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=19254 outsize=7 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=19256 outsize=962 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=19246 outsize=1388 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=19239 outsize=7 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=19255 outsize=4219 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=19265 outsize=7 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=19243 outsize=7 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=19262 outsize=645 kw= ok=1
+Cmd: compileSnippet
+  api=5 type=0 insize=4780 outsize=2100 kw=DIRECTIONAL LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=4780 outsize=4975 kw=DIRECTIONAL LIGHTMAP_OFF DIRLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=4780 outsize=7 kw=DIRECTIONAL LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=2465 outsize=2045 kw=POINT ok=1
+Cmd: compileSnippet
+  api=5 type=0 insize=2465 outsize=2146 kw=POINT_COOKIE ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=2465 outsize=7 kw=POINT ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=2465 outsize=7 kw=POINT_COOKIE ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=2465 outsize=7 kw=DIRECTIONAL_COOKIE ok=1
+End of pipe
+
+Quitting shader compiler process

@@ -1,0 +1,56 @@
+Base path: /Applications/Unity/Unity.app/Contents
+Pipe name: \\.\pipe\UnityShaderCompiler-4--1332482048
+Cmd: getPlatforms
+Cmd: compileSnippet
+  api=9 type=0 insize=5046 outsize=4347 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=5 type=0 insize=5046 outsize=4264 kw=DIRECTIONAL SHADOWS_SCREEN SHADOWS_NATIVE LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=5046 outsize=7 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=19247 outsize=1086 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=19254 outsize=7 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=19258 outsize=7 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=19253 outsize=1081 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=19240 outsize=7 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=19247 outsize=791 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=19257 outsize=7 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=19257 outsize=1215 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=19254 outsize=3051 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=19241 outsize=7 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=19246 outsize=7 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=19247 outsize=5228 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=19255 outsize=7 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=19243 outsize=690 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=19245 outsize=7 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=4780 outsize=3886 kw=DIRECTIONAL LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=4780 outsize=2219 kw=DIRECTIONAL LIGHTMAP_ON DIRLIGHTMAP_ON ok=1
+Cmd: compileSnippet
+  api=5 type=1 insize=4780 outsize=6 kw=DIRECTIONAL LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=5 type=0 insize=2465 outsize=1626 kw=DIRECTIONAL ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=2465 outsize=2134 kw=POINT_COOKIE ok=1
+Cmd: compileSnippet
+  api=5 type=1 insize=2465 outsize=6 kw=DIRECTIONAL ok=1
+Cmd: compileSnippet
+  api=5 type=1 insize=2465 outsize=6 kw=POINT_COOKIE ok=1
+End of pipe
+
+Quitting shader compiler process
