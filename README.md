@@ -19,5 +19,6 @@ Also in use is the UIKit and AVFoundation, but required knowledge of these frame
 ## Server Address
 
 http://cps-hccdev.cps.cmich.edu
+Get unique user id's: http://cps-hccdev.cps.cmich.edu/getuser.php
 
 Other relevant URL's to be added.
