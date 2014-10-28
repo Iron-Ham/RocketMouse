@@ -85,6 +85,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let background = SKSpriteNode(imageNamed: "BG_Jungle_hor_rpt_1920x768")
     
     let player = SKSpriteNode(imageNamed: "RocketMouse_1024")
+    let jumpHeight = CGFloat(0.8)
+    let jumpSpeed = CGFloat(0.2)
+    let fallSpeed = CGFloat(1)
     
     
     override func didMoveToView(view: SKView) {
@@ -192,12 +195,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //    Set jump command to occur on touch here
     override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
         
-        runAction(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
+        //runAction(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
+
+        if (player.position.y == size.height * 0.3){
+            jump();
+        }
         
         // 1 - Choose one of the touches to work with
         let touch = touches.anyObject() as UITouch
         let touchLocation = touch.locationInNode(self)
         
+        println(touch)
+        
+    }
+    
+    func jump(){
+        let actionJump = SKAction.moveTo(CGPoint(x: player.position.x, y: size.height * jumpHeight), duration: NSTimeInterval(jumpSpeed))
+        let actionGravity = SKAction.moveTo(CGPoint(x: player.position.x, y: size.height * 0.3), duration: NSTimeInterval(fallSpeed))
+        
+        player.runAction(actionJump, completion: {self.player.runAction(actionGravity)})
     }
     
     
