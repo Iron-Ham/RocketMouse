@@ -40,6 +40,18 @@
 \section{Methods}
 \subsection{Planning of Game and Development Environment}
 Unity? iOS/Swift?
+\subsection{Survey Development}
+We designed a survey for asking baseline questions to the user.
+Asks the following questions:
+
+\begin{itemize}
+  \item What is your age?
+  \item What is your gender?
+  \item Have you ever been diagnosed with ADHD?
+  \item If so, are you medicated for it?
+  \item If not, do you think you may have ADHD?
+\end{itemize}
+
 \subsection{Database Design}
 \- We will have one database and that database will be housed on the server. The database will consist of three tables; reaction time table, a survey table, and a user table. It is important to note that we don't store any identifying data about the user such as their name of anything. We assign each user a unique user id for the purpose of organizing the data and associating each user with their reaction time data, survey data, and in the event that they submit more data, we can just add the new data to their data already on the server instead of creating a new entry in the user table. The reaction time table will house the data on the reaction times the user had in the game. The survey table will contain the answers to the survey, and the user table will store data on the user such as their unique user id.
 \subsection{Privacy and Security of User's Data}
@@ -50,7 +62,6 @@ Unity? iOS/Swift?
 \- The gather data from user, we thought that the best way to get a large pool of data would be to develop a mobile application that is a game. This way, it would be entertaining for the user to play and the user may be willing to submit more data by playing longer or more often. To develop the game, we first needed to decide on the game type, we decided on a 2d side scroller where the response time characteristics are determined by the amount of time it takes the user the press the screen to jump over an object once the object has appeared on screen. 
 \subsection{Server side scripts for analyzing data}
 \- Server side scripts are the scripts that will reside on the server which are responsible for processing and analyzing the response time data that the users send to the server from their mobile devices. The scripts will be responsible for accepting data, organizing the data, and storing the data into the SQL database located on the server. The scripts will also be responsible for pulling data from the server and mining the returned data for patterns.  
-
 
 \section{References}
 [1] Epstein JN, Langberg JM, Rosen PJ, et al. Evidence for higher reaction time variability for children with ADHD on a range of cognitive tasks including reward and event rate manipulations. Neuropsychology. 2011;25(4):427-41.\newline
