@@ -4,8 +4,7 @@ using System.Collections;
 public class PlatformerCharacter2D : MonoBehaviour {
 	public ParticleSystem thruster;
 
-	float startReaction;
-
+	private GameController gameController;
 	bool facingRight = true;							// For determining which way the player is currently facing.
 
 	[SerializeField] float maxSpeed = 10f;				// The fastest the player can travel in the x axis.
@@ -24,6 +23,15 @@ public class PlatformerCharacter2D : MonoBehaviour {
 	float ceilingRadius = .01f;							// Radius of the overlap circle to determine if the player can stand up
 	Animator anim;										// Reference to the player's animator component.
 
+	void Start(){
+		GameObject gameControllerObject = GameObject.FindWithTag ("GameController");
+		if (gameControllerObject != null){
+			gameController = gameControllerObject.GetComponent <GameController>();
+		}
+		if (gameController == null){
+			Debug.Log ("Cannot find 'GameController' script");
+		}
+	}
 
     void Awake(){
 		// Setting up references.
@@ -77,11 +85,12 @@ public class PlatformerCharacter2D : MonoBehaviour {
 		}
 
         if (grounded && jump) {
-			Reaction.addStop();
+			gameController.AddScore(Reaction.addStop());
             anim.SetBool("Ground", false);
             rigidbody2D.AddForce(new Vector2(0f, jumpForce));
 			Instantiate (thruster, groundCheck.position, Quaternion.identity);
         }
+		gameController.SetDistance (transform.position.x);
 	}
 
 	
