@@ -17,6 +17,11 @@ public class Platformer2DUserControl : MonoBehaviour {
 		#else
 				if (Input.GetButtonDown("Jump")) jump = true;
 		#endif
+		if (Input.touchCount == 1) {
+			if(Input.GetTouch(0).phase == TouchPhase.Ended){
+				jump = true;
+			}
+		}
 
     }
 
