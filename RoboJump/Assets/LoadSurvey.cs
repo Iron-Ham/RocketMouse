@@ -11,12 +11,16 @@ public class LoadSurvey : MonoBehaviour {
 	}
 
 	void OnGUI () {
-		if (GUI.Button (new Rect (10,10, 100, 50), icon)) {
-			print ("you clicked the icon");
+		GUI.Label(new Rect(10, 10, 200, 40), "Have you ever been diagnosed with ADHD?");
+
+		if (GUI.Button (new Rect (10,70, 100, 20), "Yes")) {
+			print ("you clicked the yes button");
+			Application.LoadLevel("Scene1");
 		}
 
-		if (GUI.Button (new Rect (10,70, 100, 20), "This is text")) {
-			print ("you clicked the text button");
+		if (GUI.Button (new Rect (110,70, 100, 20), "No")) {
+			print ("you clicked the no button");
 		}
+
 	}
 }
