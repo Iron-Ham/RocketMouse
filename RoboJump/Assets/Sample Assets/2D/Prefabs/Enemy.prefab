@@ -11,7 +11,6 @@ GameObject:
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
   - 58: {fileID: 5800000}
-  - 50: {fileID: 0}
   - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: Enemy
@@ -83,8 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 100006, guid: 1b4de92347a9c4d78b83289c2ca9b627, type: 2}
-  me: {fileID: 0}
-  radius: 0
+  distance: 10
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
