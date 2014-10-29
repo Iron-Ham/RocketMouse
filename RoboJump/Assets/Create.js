@@ -3,7 +3,7 @@
 private static var buttonWidth: int = Screen.width - 16;
 private static var middle: float = Screen.width / 2;
 private static var buttonLeft: float = middle - buttonWidth/2;
-private static var fieldHeight: int = 30;
+private static var fieldHeight: int = 60;
 private static var fieldPadding: int  = 8;
 private static var fieldPosition: int = 1;
 
