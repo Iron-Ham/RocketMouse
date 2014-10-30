@@ -1,13 +1,36 @@
 \begin{thebibliography}{1}
 
-\bibitem{pmid17537284}
-P.~Andreou, B.~M. Neale, W.~Chen, H.~Christiansen, I.~Gabriels, A.~Heise,
-  S.~Meidad, U.~C. Muller, H.~Uebel, T.~Banaschewski, I.~Manor, R.~Oades,
-  H.~Roeyers, A.~Rothenberger, P.~Sham, H.~C. Steinhausen, P.~Asherson, and
-  J.~Kuntsi.
-\newblock {{R}eaction time performance in {A}{D}{H}{D}: improvement under
-  fast-incentive condition and familial effects}.
-\newblock {\em Psychol Med}, 37(12):1703--1715, Dec 2007.
+\bibitem{pmid24628425}
+S.~L. Karalunas, H.~M. Geurts, K.~Konrad, S.~Bender, and J.~T. Nigg.
+\newblock {{A}nnual research review: {R}eaction time variability in
+  {A}{D}{H}{D} and autism spectrum disorders: measurement and mechanisms of a
+  proposed trans-diagnostic phenotype}.
+\newblock {\em J Child Psychol Psychiatry}, 55(6):685--710, Jun 2014.
+
+\bibitem{Mostofsky:2008:RIR:1362432.1362433}
+Stewart~H. Mostofsky and Daniel~J. Simmonds.
+\newblock Response inhibition and response selection: Two sides of the same
+  coin.
+\newblock {\em J. Cognitive Neuroscience}, 20(5):751--761, May 2008.
+
+\bibitem{Andrade:2006:SGA:1190617.1191298}
+Leila Cristina Vasconcelos~de Andrade, Luis Alfredo~Vidal Carvalho, Cabral
+  Lima, Adriano Cruz, Paulo Mattos, Carlos Franco, Adriana Soares, and Bruno
+  Grieco.
+\newblock Supermarket game: An adaptive intelligent computer game for attention
+  deficit/hyperactivity disorder diagnosis.
+\newblock In {\em Proceedings of the Fifth Mexican International Conference on
+  Artificial Intelligence}, MICAI '06, pages 359--368, Washington, DC, USA,
+  2006. IEEE Computer Society.
+
+\bibitem{Santos:2011:AAT:2006075.2006688}
+Fabio E.~G. Santos, Angela P.~Z. Bastos, Leila C.~V. Andrade, Kate Revoredo,
+  and Paulo Mattos.
+\newblock Assessment of adhd through a computer game: An experiment with a
+  sample of students.
+\newblock In {\em Proceedings of the 2011 Third International Conference on
+  Games and Virtual Worlds for Serious Applications}, VS-GAMES '11, pages
+  104--111, Washington, DC, USA, 2011. IEEE Computer Society.
 
 \bibitem{pmid21463041}
 J.~N. Epstein, J.~M. Langberg, P.~J. Rosen, A.~Graham, M.~E. Narad, T.~N.
@@ -17,12 +40,14 @@ J.~N. Epstein, J.~M. Langberg, P.~J. Rosen, A.~Graham, M.~E. Narad, T.~N.
   manipulations}.
 \newblock {\em Neuropsychology}, 25(4):427--441, Jul 2011.
 
-\bibitem{pmid24628425}
-S.~L. Karalunas, H.~M. Geurts, K.~Konrad, S.~Bender, and J.~T. Nigg.
-\newblock {{A}nnual research review: {R}eaction time variability in
-  {A}{D}{H}{D} and autism spectrum disorders: measurement and mechanisms of a
-  proposed trans-diagnostic phenotype}.
-\newblock {\em J Child Psychol Psychiatry}, 55(6):685--710, Jun 2014.
+\bibitem{pmid17537284}
+P.~Andreou, B.~M. Neale, W.~Chen, H.~Christiansen, I.~Gabriels, A.~Heise,
+  S.~Meidad, U.~C. Muller, H.~Uebel, T.~Banaschewski, I.~Manor, R.~Oades,
+  H.~Roeyers, A.~Rothenberger, P.~Sham, H.~C. Steinhausen, P.~Asherson, and
+  J.~Kuntsi.
+\newblock {{R}eaction time performance in {A}{D}{H}{D}: improvement under
+  fast-incentive condition and familial effects}.
+\newblock {\em Psychol Med}, 37(12):1703--1715, Dec 2007.
 
 \bibitem{Heller2013}
 Sanjana Srivastava Jennifer Schumann Jaideep~Srivastava Monika D.~Heller,
@@ -30,11 +55,5 @@ Sanjana Srivastava Jennifer Schumann Jaideep~Srivastava Monika D.~Heller,
 \newblock A machine learning-based analysis of game data for attention deficit
   hyperactivity disorder assessment.
 \newblock {\em Games for Health Journal}, 2(5):291--298, 2013.
-
-\bibitem{Mostofsky:2008:RIR:1362432.1362433}
-Stewart~H. Mostofsky and Daniel~J. Simmonds.
-\newblock Response inhibition and response selection: Two sides of the same
-  coin.
-\newblock {\em J. Cognitive Neuroscience}, 20(5):751--761, May 2008.
 
 \end{thebibliography}
