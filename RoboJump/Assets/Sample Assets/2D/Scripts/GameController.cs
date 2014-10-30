@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour {
 	private int score;
 	private int health;
 	private int distance;
+	private PlayerPrefs prefs;
 
 	void Start(){
 		score = 0;
@@ -27,6 +28,8 @@ public class GameController : MonoBehaviour {
 	public void AddDamage(){
 		health -= 1;
 		if (health <= 0){
+			PlayerPrefs.SetInt ("score", score);
+			PlayerPrefs.SetInt ("distance", distance);
 			Application.LoadLevel ("EndGame");
 		}
 		UpdateHealth ();

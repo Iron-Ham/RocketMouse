@@ -14,11 +14,11 @@ public static class Reaction{
 		float r = 0;
 		if(start != -1){
 			r = Time.time - start;
-			reactions.Add(r);;
-			Debug.Log(r);
+			reactions.Add(r);
 			start = -1;
+			return (int) (10 * (1 - r));
 		}
-		return (int) (10 * (1 - r));
+		return 0;
 	}
 
 }
