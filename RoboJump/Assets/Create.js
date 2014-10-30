@@ -28,3 +28,9 @@ static function addButton(lbl: String, scene: String, y: int){
 		Application.LoadLevel(scene);
 	}
 }
+
+static function addQuit(lbl: String, y: int){
+	if (GUI.Button(Rect(buttonLeft, y, buttonWidth, fieldHeight), lbl)) {
+        Application.Quit();
+    }
+}

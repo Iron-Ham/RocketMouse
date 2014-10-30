@@ -14,4 +14,5 @@ function Start(){
 function OnGUI(){
 
 	addButton("Play", "Scene1", pos(3));
+	addQuit("Quit", pos(4));
 }

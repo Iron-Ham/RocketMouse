@@ -25,6 +25,7 @@ function OnGUI(){
 	UpdateScore();
 	
 	addButton("Play", "Scene1", pos(3));
+	addQuit("Quit", pos(4));
 }
 
 function UpdateScore(){

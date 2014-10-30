@@ -8,9 +8,4 @@ public class FormSubmit : MonoBehaviour {
 		PlayerPrefs.SetInt ("first", 1);
 		Application.LoadLevel ("StartMenu");
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }
