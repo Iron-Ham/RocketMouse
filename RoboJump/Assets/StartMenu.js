@@ -1,7 +1,17 @@
 ﻿import Create;
 
-function OnGUI(){;
+public var title: GUIText;
 
-	
-	addButton("Play", "Scene1", pos(2));
+function Start(){
+	Debug.Log(PlayerPrefs.GetInt("first"));
+	var first = PlayerPrefs.GetInt("first");
+	if(first == 0){
+		Application.LoadLevel("FormQ1");
+	}
+	title.text = "RoboJumpr";
+}
+
+function OnGUI(){
+
+	addButton("Play", "Scene1", pos(3));
 }

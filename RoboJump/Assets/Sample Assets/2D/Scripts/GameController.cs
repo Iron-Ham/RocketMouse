@@ -45,7 +45,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	void UpdateHealth(){
-		healthText.text = "Health: " + health;
+		healthText.text = "Health: " + (health * 100 / 3) + "%";
 	}
 
 	void UpdateDistance(){

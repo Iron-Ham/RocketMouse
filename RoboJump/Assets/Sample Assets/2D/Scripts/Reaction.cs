@@ -16,7 +16,7 @@ public static class Reaction{
 			r = Time.time - start;
 			reactions.Add(r);
 			start = -1;
-			return (int) (10 * (1 - r));
+			return (int) (10 * (1 - r > 0 ? 1 - r : 0));
 		}
 		return 0;
 	}
