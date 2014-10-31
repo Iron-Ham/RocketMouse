@@ -26,6 +26,7 @@ function OnGUI(){
 	
 	addButton("Play", "Scene1", pos(3));
 	addQuit("Quit", pos(4));
+	addClear("Clear Data", pos(6));
 }
 
 function UpdateScore(){

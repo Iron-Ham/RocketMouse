@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour {
 	private int health;
 	private int distance;
 	private PlayerPrefs prefs;
+	private Server server;
 
 	void Start(){
 		score = 0;
@@ -18,6 +19,7 @@ public class GameController : MonoBehaviour {
 		UpdateScore ();
 		UpdateHealth ();
 		UpdateDistance ();
+		server = GameObject.Find("Server").GetComponentInChildren<Server>();
 	}
 	
 	public void AddScore (int newScoreValue){
@@ -30,7 +32,7 @@ public class GameController : MonoBehaviour {
 		if (health <= 0){
 			PlayerPrefs.SetInt ("score", score);
 			PlayerPrefs.SetInt ("distance", distance);
-			Application.LoadLevel ("EndGame");
+			StartCoroutine(finish());
 		}
 		UpdateHealth ();
 	}
@@ -50,5 +52,11 @@ public class GameController : MonoBehaviour {
 
 	void UpdateDistance(){
 		distanceText.text = "Distance: " + distance;
+	}
+
+	IEnumerator finish(){
+		WWW www = server.POST("reaction.php?userid=" + PlayerPrefs.GetString("userid"), "times", Reaction.getJson());
+		yield return www;
+		Application.LoadLevel ("EndGame");
 	}
 }

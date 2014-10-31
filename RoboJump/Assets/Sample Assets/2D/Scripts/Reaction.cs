@@ -21,5 +21,16 @@ public static class Reaction{
 		return 0;
 	}
 
+	public static string getJson(){
+		string builder = "{\"times\":{[";
+		if (reactions.Count > 0){
+			builder += "\"" + reactions[0].ToString() + "\"";
+		}
+		for (int i = 1; i < reactions.Count; i++){
+			builder += ",\"" + reactions[i].ToString() + "\"";
+		}
+		return builder + "]}}";
+	}
+
 }
 

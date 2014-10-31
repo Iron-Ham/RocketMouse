@@ -34,3 +34,9 @@ static function addQuit(lbl: String, y: int){
         Application.Quit();
     }
 }
+
+static function addClear(lbl: String, y: int){
+	if (GUI.Button(Rect(buttonLeft, y, buttonWidth, fieldHeight), lbl)) {
+        PlayerPrefs.DeleteKey("best");
+    }
+}
