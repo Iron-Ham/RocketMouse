@@ -88,7 +88,13 @@
 \-Overall, our game should be fast and responsive. The user shouldn't have to wait more than a second or two to upload their data. So, tests will have to be performed to ensure the speed of the application is fast, even when the server is experiencing a heavy load.
 \subsection{Stress Tests}
 \-Manual and automatic stress tests will be performed on the server and on the mobile application to ensure that they both can handle heavy loads without breaking or experiencing any other unexpected behavior. With the manual testing, a group of 10 users or more will simultaneously perform the same functions and attempt to upload their data to ensure that no wait times or ramp up times occur. We can also perform automatic tests using open source software testing tools to stress test the server by sending a bunch of requests to the server and seeing how the server handles them. To test the stability of the mobile application, we can use monkeyrunner or anteater to simulate hundreds of pseudo random presses in places on the game screen to see if the mobile application can handle it without crashing.
+
+\section{Results}
+Current work on RocketMouse is getting HIPAA approval to allow us to use the mobile application for gathering data from children. Once we begin to gather a larger pool of data, we will be able to use more advanced data mining techniques to find patterns in the data received from the mobile application. We are currently utilizing basic statistical methods such as correlations to find basic patterns in the data. However, the larger pool of data would provide us with much more insight into any patterns and allow us to develop and use much more advanced data mining methods for analyzing the user data received from the mobile application to help find any strong indicators of ADHD.
+\section{Conclusion}
+In conclusion, we have presented a basic framework for a mobile game that captures and analyzes data to eventually and hopefully help aid in the detection of ADHD. Through the creation of a game, we are hopeful that people will be entertained by it and be willing to play and play frequently to allow us to gather a large pool of data. Also, by making the game a mobile game, we will be able to reach a large and variable audience that can easily access the game through a simple download. With HIPAA approval, the game should be ready for deployment to start gathering data and analyzing the data. As more and more data comes in, we will adjust our server side scripts accordingly to look for new patterns and we are hopeful that we will be able to find strong indicators of ADHD within the data.
 \bibliographystyle{unsrt}
 \bibliography{mybib}
+
 
 \end{document}
