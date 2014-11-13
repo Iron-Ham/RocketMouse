@@ -26,13 +26,51 @@ function getUser() {
 }
 
 function storeTimes($data) {
- echo "Storing times for user id = " . $data['uuid'];
-
-
+ $uuid = $data['uuid'];
+ $sql = "SELECT * FROM user WHERE uuid='$uuid'";
+ $result = mysql_query($sql);
+ $row = mysql_fetch_row($result);
+ if(!$row) {
+   echo "Error unknown uuid";
+   return;
+ }
+ foreach($data as $key=>$value) {
+   if(substr($key, 0, 4 ) != "time" && $key != "uuid") {
+     echo "Error invalid json key " . $key;
+	 return;
+   }
+   if(substr($key, 0, 4 ) === "time") {
+     $sql = "INSERT INTO reaction_time (uuid, time) VALUES ('$uuid', '$value')";
+     $result = mysql_query($sql) or die('Could not enter data: ' . mysql_error());
+   }
+ }
+ echo 'Success';
 }
 
 function storeSurvey($data) {
-  echo "Storing survey results.";
-
+  $uuid = $data['uuid'];
+  $sql = "SELECT * FROM user WHERE uuid='$uuid'";
+  $result = mysql_query($sql);
+  $row = mysql_fetch_row($result);
+  if(!$row) {
+   echo "Error unknown uuid";
+   return;
+  }
+  $sql = "SELECT * FROM survey WHERE uuid='$uuid'";
+  $result = mysql_query($sql);
+  $row = mysql_fetch_row($result);
+  if($row) {
+   echo "Error survey already submitted for uuid";
+   return;
+  }
+  $diag = $data['is_diagnosed'];
+  $medi = $data['is_medicated'];
+  $gender = $data['gender'];
+  $age = $data['age'];
+  
+  $sql = "INSERT INTO survey (uuid, is_diagnosed, is_medicated, gender, age) VALUES ('$uuid', '$diag', '$medi', '$gender', '$age')";
+  $result = mysql_query($sql) or die('Could not enter data: ' . mysql_error());
+  
+  echo 'Success';
 }
 ?>
