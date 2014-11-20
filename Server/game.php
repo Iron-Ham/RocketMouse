@@ -7,6 +7,8 @@ if($function == "getuser") {
   getUser();
 } else {
   $json = $_POST["json"];
+  echo "Data dump: ";
+  var_dump($json);
   $data = json_decode($json, true);
   if($function == "times") storeTimes($data);
   elseif($function == "survey") storeSurvey($data);
@@ -34,15 +36,11 @@ function storeTimes($data) {
    echo "Error unknown uuid: " . $uuid;
    return;
  }
- foreach($data as $key=>$value) {
-   if(substr($key, 0, 4 ) != "time" && $key != "uuid") {
-     echo "Error invalid json key " . $key;
-	 return;
-   }
-   if(substr($key, 0, 4 ) === "time") {
-     $sql = "INSERT INTO reaction_time (uuid, time) VALUES ('$uuid', '$value')";
-     $result = mysql_query($sql) or die('Could not enter data: ' . mysql_error());
-   }
+ 
+ $timelist = $data['times'];
+ foreach($timelist as $value) {
+   $sql = "INSERT INTO reaction_time (uuid, time) VALUES ('$uuid', '$value')";
+   $result = mysql_query($sql) or die('Could not enter data: ' . mysql_error());
  }
  echo 'Success';
 }
