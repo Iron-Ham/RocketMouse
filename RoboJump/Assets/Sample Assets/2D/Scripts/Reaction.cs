@@ -22,14 +22,15 @@ public static class Reaction{
 	}
 
 	public static string getJson(){
-		string builder = "{\"times\":{[";
+		string builder = "{\"uuid\":\"" + PlayerPrefs.GetString("uuid") +  "\",\"times\":[";
 		if (reactions.Count > 0){
 			builder += "\"" + reactions[0].ToString() + "\"";
 		}
 		for (int i = 1; i < reactions.Count; i++){
 			builder += ",\"" + reactions[i].ToString() + "\"";
 		}
-		return builder + "]}}";
+		builder += "]}";
+		return builder;
 	}
 
 }

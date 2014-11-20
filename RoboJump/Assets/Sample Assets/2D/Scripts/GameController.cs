@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour {
 		UpdateScore ();
 		UpdateHealth ();
 		UpdateDistance ();
+		PlayerPrefs.SetString ();
 		server = GameObject.Find("Server").GetComponentInChildren<Server>();
 	}
 	
@@ -55,8 +56,9 @@ public class GameController : MonoBehaviour {
 	}
 
 	IEnumerator finish(){
-		WWW www = server.POST("reaction.php?userid=" + PlayerPrefs.GetString("userid"), "times", Reaction.getJson());
+		WWW www = server.POST("times", "json", Reaction.getJson());
 		yield return www;
+		Debug.Log (www.text);
 		Application.LoadLevel ("EndGame");
 	}
 }
