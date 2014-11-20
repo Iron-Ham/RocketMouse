@@ -6,7 +6,7 @@ $function = $_GET["do"];
 if($function == "getuser") {
   getUser();
 } else {
-  $json = file_get_contents('php://input');
+  $json = $_POST["json"];
   $data = json_decode($json, true);
   if($function == "times") storeTimes($data);
   elseif($function == "survey") storeSurvey($data);
@@ -31,7 +31,7 @@ function storeTimes($data) {
  $result = mysql_query($sql);
  $row = mysql_fetch_row($result);
  if(!$row) {
-   echo "Error unknown uuid";
+   echo "Error unknown uuid: " . $uuid;
    return;
  }
  foreach($data as $key=>$value) {
