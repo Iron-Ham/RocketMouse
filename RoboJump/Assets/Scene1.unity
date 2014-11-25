@@ -1669,6 +1669,10 @@ Prefab:
       propertyPath: yMax
       value: 3.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cf3b566c26d9e4e3d8114e8744174d1d, type: 2}
+      propertyPath: yMin
+      value: 2.0999999
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf3b566c26d9e4e3d8114e8744174d1d, type: 2}
   m_RootGameObject: {fileID: 1415639689}
@@ -2974,7 +2978,7 @@ MonoBehaviour:
   intervalMax: .5
   xMin: 15
   xMax: 40
-  yMin: 2
+  yMin: 2.0999999
   yMax: 3.5
   zMin: 0
   zMax: 0

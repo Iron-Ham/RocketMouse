@@ -19,7 +19,6 @@ public class GameController : MonoBehaviour {
 		UpdateScore ();
 		UpdateHealth ();
 		UpdateDistance ();
-		PlayerPrefs.SetString ();
 		server = GameObject.Find("Server").GetComponentInChildren<Server>();
 	}
 	

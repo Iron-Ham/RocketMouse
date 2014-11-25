@@ -21,10 +21,18 @@ public class FormSubmit : MonoBehaviour {
 		www = server.POST("survey", "json", output);
 		yield return www;
 		Debug.Log (www.text);
+		if (www.text.Contains ("Success")) {
+			clear("is_diagnosed"); clear("is_medicated"); clear("gender"); clear("age");
+			Debug.Log ("Form Clear");
+		}
 		Application.LoadLevel("StartMenu");
 	}
 
 	string get(string id){
 		return PlayerPrefs.GetString (id);
+	}
+
+	void clear(string id){
+		PlayerPrefs.DeleteKey (id);
 	}
 }
